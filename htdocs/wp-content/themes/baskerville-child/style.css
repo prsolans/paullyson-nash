@@ -1,0 +1,17 @@
+/*
+ Theme Name:   Broadway
+ Description:  Baskerville Child Theme
+ Author:       Paul R. Solans
+ Author URI:   http://prswebdev.com
+ Template:     baskerville
+ Version:      1.0.0
+ 
+*/
+
+@import url("../baskerville/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+.blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
+
+.rating-block { border: 1px solid #003399; float: left; padding: 9px; margin: 9px !important;}
