@@ -17,8 +17,8 @@ function create_restaurant_post_type()
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-location',
-            'taxonomies' => array('category', 'post_tag')
-
+            'taxonomies' => array('category', 'post_tag'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
         )
     );
 }
@@ -39,7 +39,8 @@ function create_experience_post_type()
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-smiley',
-            'taxonomies' => array('category', 'post_tag')
+            'taxonomies' => array('category', 'post_tag'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
         )
     );
 }
@@ -60,7 +61,8 @@ function create_service_post_type()
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-art',
-            'taxonomies' => array('category', 'post_tag')
+            'taxonomies' => array('category', 'post_tag'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
         )
     );
 }
@@ -81,7 +83,8 @@ function create_shop_post_type()
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-cart',
-            'taxonomies' => array('category', 'post_tag')
+            'taxonomies' => array('category', 'post_tag'),
+            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
         )
     );
 
@@ -111,8 +114,8 @@ function display_page_block_copy()
 /**
  * Collect posts and send to appropriate display function
  *
- * @string $posttype - Post type for the ratings
- * @string $username - Author name whose table will be displayes
+ * @param string $posttype - Post type for the ratings
+ * @param string $username - Author name whose table will be displayes
  */
 function display_ratings_table($posttype, $username)
 {
@@ -121,20 +124,25 @@ function display_ratings_table($posttype, $username)
         'post_type' => $posttype
     ));
 
-
     if($posttype == 'restaurant'){
         display_restaurant_table($posts, $username);
     }
     elseif($posttype == 'experience'){
         display_experience_table($posts, $username);
     }
+    elseif($posttype == 'shop'){
+        display_shop_table($posts, $username);
+    }
+    elseif($posttype == 'service'){
+        display_service_table($posts, $username);
+    }
 
 }
 
 /**
  * Display table of ratings for restaurants
- * @array $posts - Collection of posts
- * @param $username - Related to a specific author
+ * @param array $posts - Collection of posts
+ * @param string $username - Related to a specific author
  */
 function display_restaurant_table($posts, $username) {
     $usernameToLower = strtolower($username);
@@ -160,8 +168,8 @@ function display_restaurant_table($posts, $username) {
 
 /**
  * Display table of ratings for experiences
- * @array $posts - Collection of posts
- * @param $username - Related to a specific author
+ * @param array $posts - Collection of posts
+ * @param string $username - Related to a specific author
  */
 function display_experience_table($posts, $username) {
     $usernameToLower = strtolower($username);
@@ -171,17 +179,87 @@ function display_experience_table($posts, $username) {
             <h1>' . $username . '</h1>
             <table>
                 <thead>
-                    <th>Experience</th><th class="center">Venue</th><th class="center">Fun</th><th class="center">Ease</th><th class="center">Intangibles</th></tr>
+                    <th>Experience</th><th class="center">Venue</th><th class="center">Fun</th><th class="center">Intangibles</th></tr>
                 </thead>
                 <tbody>';
         foreach ($posts as $post) {
             echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
             echo '<td class="center">' . get_field($usernameToLower . '_experience_venue', $post->ID) . '</td >';
             echo '<td class="center">' . get_field($usernameToLower . '_experience_fun', $post->ID) . '</td >';
-            echo '<td class="center">' . get_field($usernameToLower . '_experience_ease', $post->ID) . '</td >';
             echo '<td class="center">' . get_field($usernameToLower . '_experience_intangibles', $post->ID) . '</td ></tr >';
         }
 
         echo '</tbody></table></div>';
     }
 }
+
+/**
+ * Display table of ratings for experiences
+ * @param array $posts - Collection of posts
+ * @param string $username - Related to a specific author
+ */
+function display_shop_table($posts, $username) {
+    $usernameToLower = strtolower($username);
+
+    if ($posts) {
+        echo '<div class="ratingTable">
+            <h1>' . $username . '</h1>
+            <table>
+                <thead>
+                    <th>Shop</th><th class="center">Ease</th><th class="center">Quality</th><th class="center">Ambiance</th></tr>
+                </thead>
+                <tbody>';
+        foreach ($posts as $post) {
+            echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_shop_ease', $post->ID) . '</td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_shop_quality', $post->ID) . '</td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_shop_ambiance', $post->ID) . '</td ></tr >';
+        }
+
+        echo '</tbody></table></div>';
+    }
+}
+
+/**
+ * Display table of ratings for experiences
+ * @param array $posts - Collection of posts
+ * @param string $username - Related to a specific author
+ */
+function display_service_table($posts, $username) {
+    $usernameToLower = strtolower($username);
+
+    if ($posts) {
+        echo '<div class="ratingTable">
+            <h1>' . $username . '</h1>
+            <table>
+                <thead>
+                    <th>Service</th><th class="center">Ease</th><th class="center">Quality</th><th class="center">People</th></tr>
+                </thead>
+                <tbody>';
+        foreach ($posts as $post) {
+            echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_service_ease', $post->ID) . '</td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_service_quality', $post->ID) . '</td >';
+            echo '<td class="center">' . get_field($usernameToLower . '_service_people', $post->ID) . '</td ></tr >';
+        }
+
+        echo '</tbody></table></div>';
+    }
+}
+
+add_filter('pre_get_posts', 'query_post_type');
+
+function query_post_type($query) {
+    if(is_category() || is_tag()) {
+        $post_type = get_query_var('post_type');
+        if($post_type)
+            $post_type = $post_type;
+        else
+            $post_type = array('restaurant','service', 'shop', 'experience', 'nav_menu_item');
+        $query->set('post_type',$post_type);
+        return $query;
+    }
+
+    return null;
+}
+

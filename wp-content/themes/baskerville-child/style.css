@@ -14,9 +14,9 @@
 -------------------------------------------------------------- */
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
-.rating-block { border: 5px solid #003399; float: left; padding: 9px; margin: 9px !important;}
+.rating-block { border: 5px solid #929196; float: left; padding: 9px; margin: 9px !important;}
 
-.ratingTable { width: 45%; margin: 10px 0; float: left}
+.ratingTable { width: 50%; margin: 10px 0; float: left; }
 
 .ratingTable h1 { font-size: 2rem; margin: 15px 0;}
 
@@ -28,7 +28,11 @@
 
 .ratingTable table td.center {text-align: center; }
 
-/* = Theme utility classes
+@media (max-width: 768px) {
+    .ratingTable { width: 100%; margin: 10px 0; clear: both; }
+}
+
+/* =Theme utility classes
 -------------------------------------------------------------- */
 .cleardiv {clear: both; height: 20px}
 

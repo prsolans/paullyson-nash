@@ -15,33 +15,21 @@ Template Name: Services (All)
 
     <div class="wrapper section medium-padding">
 
-        <div class="page-title section-inner">
+        <div class="content section-inner" style="width: 85%">
 
-        </div>
-        <!-- /page-title -->
+            <?php
+            display_page_title();
+            display_page_block_copy();
+            ?>
 
-        <div class="content section-inner">
 
             <?php
 
-
-            $posts = get_posts(array(
-                'numberposts' => -1,
-                'post_type' => 'service'
-            ));
-
-            if ($posts) {
-                echo '<ul>';
-
-                foreach ($posts as $post) {
-                    echo '<li><a href="' . get_permalink($post->ID) . '">' . get_the_title($post->ID) . '</a></li>';
-                }
-
-                echo '</ul>';
-            }
+            display_ratings_table('service', 'PRS');
+            display_ratings_table('service', 'Allykc');
 
             ?>
-
+            <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->
 

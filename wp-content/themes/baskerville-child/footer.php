@@ -59,11 +59,11 @@
 					
 						<div class="widget-content">
 						
-							<h3 class="widget-title"><?php _e( 'Latest posts', 'baskerville' ); ?></h3>
+							<h3 class="widget-title"><?php _e( 'Latest reviews', 'baskerville' ); ?></h3>
 							
 							<ul>
 				                <?php
-									$args = array( 'numberposts' => '5', 'post_status' => 'publish' );
+									$args = array( 'numberposts' => '5', 'post_type' => array('restaurant', 'shop', 'experience', 'service'), 'post_status' => 'publish' );
 									$recent_posts = wp_get_recent_posts( $args );
 									foreach( $recent_posts as $recent ){
 										echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
