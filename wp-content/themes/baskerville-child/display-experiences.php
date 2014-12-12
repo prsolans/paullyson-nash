@@ -15,12 +15,15 @@ Template Name: Experiences (All)
 
     <div class="wrapper section medium-padding">
 
-        <div class="page-title section-inner">
-
-        </div>
-        <!-- /page-title -->
 
         <div class="content section-inner">
+
+            <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
+                                      title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php the_content(); ?>
+            <?php endwhile; endif; ?>
 
             <?php
 
