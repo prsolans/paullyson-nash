@@ -15,3 +15,16 @@
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
 .rating-block { border: 5px solid #003399; float: left; padding: 9px; margin: 9px !important;}
+
+.ratingTable { width: 45%; margin: 10px 0; float: left}
+
+.ratingTable h1 { font-size: 2rem; margin: 15px 0;}
+
+.ratingTable table {width: 100%;}
+
+.ratingTable table th { font-weight: bold; }
+
+.ratingTable table td { line-height: 2 !important;}
+
+.ratingTable table td.center {text-align: center; }
+

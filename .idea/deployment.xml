@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="PROD" uploadOnCheckin="0fb3f690-ccd6-4e29-9f98-e95858b4ea73">
+    <serverData>
+      <paths name="PROD">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/paullyson/wordpress" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="PROD" />
+  </component>
+</project>
+

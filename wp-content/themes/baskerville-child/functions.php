@@ -15,8 +15,10 @@ function create_restaurant_post_type() {
 			'public'        => true,
 			'has_archive'   => true,
 			'menu_position' => 4,
-			'menu_icon'     => 'dashicons-location'
-		)
+			'menu_icon'     => 'dashicons-location',
+            'taxonomies' => array('category', 'post_tag')
+
+        )
 	);
 }
 
@@ -34,9 +36,9 @@ function create_experience_post_type() {
 			'public'        => true,
 			'has_archive'   => true,
 			'menu_position' => 4,
-			'menu_icon'     => 'dashicons-smiley'
-
-		)
+			'menu_icon'     => 'dashicons-smiley',
+            'taxonomies' => array('category', 'post_tag')
+        )
 	);
 }
 
@@ -54,8 +56,9 @@ function create_service_post_type() {
 			'public'        => true,
 			'has_archive'   => true,
 			'menu_position' => 4,
-			'menu_icon'     => 'dashicons-art'
-		)
+			'menu_icon'     => 'dashicons-art',
+            'taxonomies' => array('category', 'post_tag')
+        )
 	);
 }
 
@@ -74,17 +77,10 @@ function create_shop_post_type() {
 			'has_archive'   => true,
 			'menu_position' => 4,
 			'menu_icon'     => 'dashicons-cart',
-            'rewrite'       => true
+            'taxonomies' => array('category', 'post_tag')
 		)
 	);
 
-}
-
-add_action( 'init', 'display_custom_restaurant_rankings' );
-
-function display_custom_restaurant_rankings() {
-
-	return '5';
 }
 
 ?>
