@@ -16,35 +16,21 @@ Template Name: Experiences (All)
     <div class="wrapper section medium-padding">
 
 
-        <div class="content section-inner">
+        <div class="content section-inner" style="width: 85%">
 
-            <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
-                                      title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+            <?php
+            display_page_title();
+            display_page_block_copy();
+            ?>
 
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php the_content(); ?>
-            <?php endwhile; endif; ?>
 
             <?php
 
-
-            $posts = get_posts(array(
-                'numberposts' => -1,
-                'post_type' => 'experience'
-            ));
-
-            if ($posts) {
-                echo '<ul>';
-
-                foreach ($posts as $post) {
-                    echo '<li><a href="' . get_permalink($post->ID) . '">' . get_the_title($post->ID) . '</a></li>';
-                }
-
-                echo '</ul>';
-            }
+            display_ratings_table('experience', 'PRS');
+            display_ratings_table('experience', 'Allykc');
 
             ?>
-
+            <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->
 

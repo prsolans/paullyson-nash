@@ -28,3 +28,7 @@
 
 .ratingTable table td.center {text-align: center; }
 
+/* = Theme utility classes
+-------------------------------------------------------------- */
+.cleardiv {clear: both; height: 20px}
+
