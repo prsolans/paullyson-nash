@@ -45,6 +45,7 @@ $format = get_post_format();
 
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
                                   title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+        <h3><?php echo "Overall Score: ".get_overall_rating_score(); ?></h3>
 
     </div>
     <!-- /post-header -->
@@ -157,17 +158,16 @@ $format = get_post_format();
     <div class="post-content">
 
         <?php the_content(); ?>
-
         <?php
-            echo '<div class="rating-block">PRS says<br/>';
-            echo '<br/>Service: '. get_field('prs_restaurant_service');
-            echo '<br/>Food: '. get_field('prs_restaurant_food');
-            echo '<br/>Ambiance: '. get_field('prs_restaurant_ambiance');
+            echo '<div class="ratingBlock"><h3>PRS says</h3>';
+            echo '<label>Service:</label> '. get_field('prs_restaurant_service');
+            echo '<br/><label>Food:</label> '. get_field('prs_restaurant_food');
+            echo '<br/><label>Ambiance:</label> '. get_field('prs_restaurant_ambiance');
             echo '</div>';
-            echo '<div class="rating-block">Allykc says<br/>';
-            echo '<br/>Service: '. get_field('allykc_restaurant_service');
-            echo '<br/>Food: '. get_field('allykc_restaurant_food');
-            echo '<br/>Ambiance: '. get_field('allykc_restaurant_ambiance');
+            echo '<div class="ratingBlock"><h3>Allykc says</h3>';
+            echo '<label>Service:</label> '. get_field('allykc_restaurant_service');
+            echo '<br/><label>Food:</label> '. get_field('allykc_restaurant_food');
+            echo '<br/><label>Ambiance:</label> '. get_field('allykc_restaurant_ambiance');
             echo '</div>';
         ?>
 

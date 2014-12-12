@@ -157,9 +157,19 @@ $format = get_post_format();
     <div class="post-content">
 
         <?php the_content(); ?>
-        Ease: <?php the_field('service_ease'); ?><br/>
-        Quality: <?php the_field('service_quality'); ?><br/>
-        People: <?php the_field('service_people'); ?><br/>
+
+        <?php
+        echo '<div class="ratingBlock"><h3>PRS says</h3>';
+        echo '<label>Ease:</label> '. get_field('prs_service_ease');
+        echo '<br/><label>Quality:</label> '. get_field('prs_service_quality');
+        echo '<br/><label>People:</label> '. get_field('prs_service_people');
+        echo '</div>';
+        echo '<div class="ratingBlock"><h3>Allykc says</h3>';
+        echo '<label>Ease:</label> '. get_field('allykc_service_ease');
+        echo '<br/><label>Quality:</label> '. get_field('allykc_service_quality');
+        echo '<br/><label>People:</label> '. get_field('allykc_service_people');
+        echo '</div>';
+        ?>
 
         <?php wp_link_pages(); ?>
 

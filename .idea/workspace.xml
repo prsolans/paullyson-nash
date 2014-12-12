@@ -4,11 +4,12 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="Updated all four menu page displays and accompanying functions, minor style updates">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php" />
+    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="Updated individual custom post presentation, added metric for restaurants overall rating">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -41,8 +42,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="660">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="735">
+              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -51,7 +52,7 @@
       <file leaf-file-name="display-restaurants.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="165" max-vertical-offset="675">
+            <state vertical-scroll-proportion="-7.5833335" vertical-offset="268" max-vertical-offset="675">
               <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="e#284#302#0#HTML" expanded="true" />
@@ -72,59 +73,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="single-experience.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="2743" max-vertical-offset="4890">
+              <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-restaurant.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.28" vertical-offset="541" max-vertical-offset="4890">
+              <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-service.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.25" vertical-offset="2250" max-vertical-offset="4890">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="171" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-shop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25" vertical-offset="2295" max-vertical-offset="4890">
+              <caret line="171" column="10" selection-start-line="171" selection-start-column="10" selection-end-line="171" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8369565" vertical-offset="3575" max-vertical-offset="4065">
-              <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.833333" vertical-offset="3481" max-vertical-offset="4170">
+              <caret line="251" column="45" selection-start-line="251" selection-start-column="45" selection-end-line="251" selection-end-column="45" />
               <folding>
-                <marker date="1418425507000" expanded="true" signature="4042:4406" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="4133:4406" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="4173:4366" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="5291:5559" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="5350:5559" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="5374:5535" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="6438:6700" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="6497:6700" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="6521:6676" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="7564:7827" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="7623:7827" placeholder="..." />
-                <marker date="1418425507000" expanded="true" signature="7647:7803" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="4042:4406" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="4133:4406" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="4173:4366" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="5291:5559" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="5350:5559" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="5374:5535" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="6438:6700" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="6497:6700" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="6521:6676" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="7564:7827" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="7623:7827" placeholder="..." />
+                <marker date="1418427575000" expanded="true" signature="7647:7803" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display-services.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5833335" vertical-offset="208" max-vertical-offset="615">
-              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-              <folding>
-                <element signature="e#249#267#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display-shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="615">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-              <folding>
-                <element signature="e#246#264#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.416667" vertical-offset="1775" max-vertical-offset="2235">
-              <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,10 +160,14 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/actions/export.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
       </list>
     </option>
@@ -483,7 +494,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418416475501</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated all four menu page displays and accompanying functions, minor style updates">
+      <created>1418425528456</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1418425528456</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -495,7 +512,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921466" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21857142" sideWeight="0.15039062" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -534,7 +551,8 @@
     <MESSAGE value="Update of experience archive display title, Test of push to prod" />
     <MESSAGE value="Created display functions for Experience and Restaurant ratings tables" />
     <MESSAGE value="Updated all four menu page displays and accompanying functions, minor style updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated all four menu page displays and accompanying functions, minor style updates" />
+    <MESSAGE value="Updated individual custom post presentation, added metric for restaurants overall rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated individual custom post presentation, added metric for restaurants overall rating" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$</wordpressPath>
@@ -569,18 +587,18 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1380">
           <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding>
-            <marker date="1418425507000" expanded="true" signature="4042:4406" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="4133:4406" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="4173:4366" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5291:5559" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5350:5559" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5374:5535" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6438:6700" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6497:6700" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6521:6676" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7564:7827" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7623:7827" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7647:7803" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4042:4406" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4133:4406" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4173:4366" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5291:5559" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5350:5559" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5374:5535" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6438:6700" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6497:6700" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6521:6676" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7564:7827" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7623:7827" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7647:7803" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -641,13 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34410113" vertical-offset="3145" max-vertical-offset="4125">
           <caret line="232" column="4" selection-start-line="232" selection-start-column="4" selection-end-line="232" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.875" vertical-offset="27" max-vertical-offset="4740">
-          <caret line="8" column="4" selection-start-line="43" selection-start-column="0" selection-end-line="48" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -656,14 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3636364" vertical-offset="555" max-vertical-offset="1275">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="660">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -709,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="165" max-vertical-offset="675">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding>
-            <element signature="e#284#302#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2083333" vertical-offset="163" max-vertical-offset="630">
@@ -729,52 +722,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5833335" vertical-offset="208" max-vertical-offset="615">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="e#249#267#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="4.5" vertical-offset="0" max-vertical-offset="2235">
+          <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="615">
+        <state vertical-scroll-proportion="0.84782606" vertical-offset="0" max-vertical-offset="615">
           <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding>
-            <element signature="e#246#264#0#HTML" expanded="true" />
+            <element signature="e#246#264#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.416667" vertical-offset="1775" max-vertical-offset="2235">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.51086956" vertical-offset="155" max-vertical-offset="615">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <element signature="e#249#267#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5833335" vertical-offset="268" max-vertical-offset="675">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#284#302#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="735">
+          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="2250" max-vertical-offset="4890">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="171" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="2295" max-vertical-offset="4890">
+          <caret line="171" column="10" selection-start-line="171" selection-start-column="10" selection-end-line="171" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.28" vertical-offset="541" max-vertical-offset="4890">
+          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8369565" vertical-offset="3575" max-vertical-offset="4065">
-          <caret line="264" column="0" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.833333" vertical-offset="3481" max-vertical-offset="4170">
+          <caret line="251" column="45" selection-start-line="251" selection-start-column="45" selection-end-line="251" selection-end-column="45" />
           <folding>
-            <marker date="1418425507000" expanded="true" signature="4042:4406" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="4133:4406" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="4173:4366" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5291:5559" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5350:5559" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="5374:5535" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6438:6700" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6497:6700" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="6521:6676" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7564:7827" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7623:7827" placeholder="..." />
-            <marker date="1418425507000" expanded="true" signature="7647:7803" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4042:4406" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4133:4406" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="4173:4366" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5291:5559" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5350:5559" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="5374:5535" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6438:6700" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6497:6700" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="6521:6676" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7564:7827" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7623:7827" placeholder="..." />
+            <marker date="1418427575000" expanded="true" signature="7647:7803" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2743" max-vertical-offset="4890">
+          <caret line="192" column="51" selection-start-line="192" selection-start-column="51" selection-end-line="192" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

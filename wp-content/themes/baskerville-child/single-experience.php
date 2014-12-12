@@ -157,10 +157,20 @@ $format = get_post_format();
     <div class="post-content">
 
         <?php the_content(); ?>
-        Venue: <?php the_field('experience_venue'); ?><br/>
-        Fun: <?php the_field('experience_fun'); ?><br/>
-        Ease: <?php the_field('experience_ease'); ?><br/>
-        Intangibles: <?php the_field('experience_intangibles'); ?>
+
+        <?php
+        echo '<div class="ratingBlock"><h3>PRS says</h3>';
+        echo '<label>Venue:</label> '. get_field('prs_experience_venue');
+        echo '<br/><label>Fun:</label> '. get_field('prs_experience_fun');
+        echo '<br/><label>Intangibles:</label> '. get_field('prs_experience_intangibles');
+        echo '</div>';
+        echo '<div class="ratingBlock"><h3>Allykc says</h3>';
+        echo '<label>Venue:</label> '. get_field('allykc_experience_venue');
+        echo '<br/><label>Fun:</label> '. get_field('allykc_experience_fun');
+        echo '<br/><label>Intangibles:</label> '. get_field('allykc_experience_intangibles');
+        echo '</div>';
+        ?>
+
         <?php wp_link_pages(); ?>
 
         <div class="clear"></div>

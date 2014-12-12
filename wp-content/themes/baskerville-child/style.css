@@ -14,9 +14,14 @@
 -------------------------------------------------------------- */
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
-.rating-block { border: 5px solid #929196; float: left; padding: 9px; margin: 9px !important;}
+.nocomments {display: none;}
 
-.ratingTable { width: 50%; margin: 10px 0; float: left; }
+/* =Ratings display starts here
+-------------------------------------------------------------- */
+
+.ratingBlock, .ratingTable { width: 50%; margin: 10px 0 !important; float: left; }
+
+.ratingBlock label {width: 100px; display: inline-block;}
 
 .ratingTable h1 { font-size: 2rem; margin: 15px 0;}
 

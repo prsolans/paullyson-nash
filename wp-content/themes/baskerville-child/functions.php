@@ -247,16 +247,23 @@ function display_service_table($posts, $username) {
     }
 }
 
+function get_overall_rating_score() {
+    $overallScore = get_field('prs_restaurant_service') + get_field('allykc_restaurant_service') + get_field('prs_restaurant_food') + get_field('allykc_restaurant_food') + get_field('prs_restaurant_ambiance') + get_field('allykc_restaurant_ambiance');
+    $overallScore = round($overallScore/6, 1);
+    return $overallScore;
+}
+
 add_filter('pre_get_posts', 'query_post_type');
 
 function query_post_type($query) {
     if(is_category() || is_tag()) {
         $post_type = get_query_var('post_type');
-        if($post_type)
-            $post_type = $post_type;
-        else
-            $post_type = array('restaurant','service', 'shop', 'experience', 'nav_menu_item');
-        $query->set('post_type',$post_type);
+        if(!$post_type) {
+            $post_type = array('restaurant', 'service', 'shop', 'experience', 'nav_menu_item');
+        }
+        if (!empty($query)) {
+            $query->set('post_type',$post_type);
+        }
         return $query;
     }
 
