@@ -31,7 +31,9 @@
 
 .ratingTable table td { line-height: 2 !important;}
 
-.ratingTable table td.center {text-align: center; }
+.ratingTable table td.center, .ratingTable table th.center {text-align: center; }
+
+.overallRatingTable { width: 100%; }
 
 @media (max-width: 768px) {
     .ratingTable { width: 100%; margin: 10px 0; clear: both; }

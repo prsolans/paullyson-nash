@@ -156,10 +156,46 @@ function display_restaurant_table($posts, $username) {
                                 </thead>
                                 <tbody>';
         foreach ($posts as $post) {
+
             echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
             echo '<td class="center">' . get_field($usernameToLower . '_restaurant_service', $post->ID) . '</td >';
             echo '<td class="center">' . get_field($usernameToLower . '_restaurant_food', $post->ID) . '</td >';
             echo '<td class="center">' . get_field($usernameToLower . '_restaurant_ambiance', $post->ID) . '</td ></tr >';
+        }
+
+        echo '</tbody></table></div>';
+    }
+}
+
+function display_restaurants_overall()
+{
+    $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => 'restaurant'
+    ));
+
+
+    if ($posts) {
+        echo '<div class="ratingTable overallRatingTable">
+        <table>
+            <thead>
+                <th>Restaurant</th>
+                <th class="center">Service</th>
+                <th class="center">Food</th>
+                <th class="center">Ambiance</th>
+                <th class="center">Overall</th>
+                <th class="center">Date</th>
+            </thead>
+            <tbody>';
+        foreach ($posts as $post) {
+
+            $scores = get_overall_rating_score($post->ID);
+            echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
+            echo '<td class="center">' . $scores['foodScore'] . '</td >';
+            echo '<td class="center">' . $scores['serviceScore'] . '</td >';
+            echo '<td class="center">' . $scores['ambianceScore'] . '</td >';
+            echo '<td class="center">' . $scores['overallScore'] . '</td >';
+            echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
         }
 
         echo '</tbody></table></div>';
@@ -247,10 +283,20 @@ function display_service_table($posts, $username) {
     }
 }
 
-function get_overall_rating_score() {
-    $overallScore = get_field('prs_restaurant_service') + get_field('allykc_restaurant_service') + get_field('prs_restaurant_food') + get_field('allykc_restaurant_food') + get_field('prs_restaurant_ambiance') + get_field('allykc_restaurant_ambiance');
-    $overallScore = round($overallScore/6, 1);
-    return $overallScore;
+function get_overall_rating_score($postId) {
+    $serviceScore = (get_field('prs_restaurant_service', $postId) + get_field('allykc_restaurant_service', $postId))/2;
+    $foodScore = (get_field('prs_restaurant_food', $postId) + get_field('allykc_restaurant_food', $postId))/2;
+    $ambianceScore = (get_field('prs_restaurant_ambiance', $postId) + get_field('allykc_restaurant_ambiance', $postId))/2;
+    $totalScore = $serviceScore + $foodScore + $ambianceScore;
+
+    $scores = array();
+    $scores['serviceScore'] = $serviceScore;
+    $scores['foodScore'] = $foodScore;
+    $scores['ambianceScore'] = $ambianceScore;
+    $scores['totalScore'] = $totalScore;
+    $scores['overallScore'] = round($totalScore/3, 1);
+
+    return $scores;
 }
 
 add_filter('pre_get_posts', 'query_post_type');

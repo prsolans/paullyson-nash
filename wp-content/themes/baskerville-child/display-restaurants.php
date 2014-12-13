@@ -29,6 +29,8 @@ Template Name: Restaurants (All)
 
             <?php
 
+            display_restaurants_overall();
+
             display_ratings_table('restaurant', 'PRS');
             display_ratings_table('restaurant', 'Allykc');
 
