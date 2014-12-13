@@ -159,7 +159,7 @@ $format = get_post_format();
     <?php endif; ?>
 
     <div class="post-content">
-
+        <?php pronamic_google_maps_address(); ?>
         <?php the_content(); ?>
         <?php
             echo '<div class="ratingBlock"><h3>PRS says</h3>';

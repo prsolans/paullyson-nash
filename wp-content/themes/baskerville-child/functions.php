@@ -215,7 +215,7 @@ function display_restaurants_overall()
             echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
         }
 
-        echo '</tbody></table></div>';
+        echo '</tbody></table><label>* - indicates rating is TBD</label></div>';
     }
 }
 
@@ -310,18 +310,31 @@ function display_service_table($posts, $username)
  */
 function get_all_ratings_for_a_restaurant($postId)
 {
-    $serviceScore = (get_field('prs_restaurant_service', $postId) + get_field('allykc_restaurant_service', $postId)) / 2;
-    $foodScore = (get_field('prs_restaurant_food', $postId) + get_field('allykc_restaurant_food', $postId)) / 2;
-    $ambianceScore = (get_field('prs_restaurant_ambiance', $postId) + get_field('allykc_restaurant_ambiance', $postId)) / 2;
+    // Confirm whether both authors have submitted reviews
+    // TODO: Create more thorough test to confirm if a user has submitted reviews, create a flag for all three or something
+    $divideBy = 1;
+    if (get_field('allykc_restaurant_service', $postId) && get_field('prs_restaurant_service', $postId)) {
+        $divideBy = 2;
+    }
+
+    $serviceScore = (get_field('prs_restaurant_service', $postId) + get_field('allykc_restaurant_service', $postId)) / $divideBy;
+    $foodScore = (get_field('prs_restaurant_food', $postId) + get_field('allykc_restaurant_food', $postId)) / $divideBy;
+    $ambianceScore = (get_field('prs_restaurant_ambiance', $postId) + get_field('allykc_restaurant_ambiance', $postId)) / $divideBy;
     $totalScore = $serviceScore + $foodScore + $ambianceScore;
 
-    $scores = array();
-    $scores['serviceScore'] = $serviceScore;
-    $scores['foodScore'] = $foodScore;
-    $scores['ambianceScore'] = $ambianceScore;
-    $scores['totalScore'] = $totalScore;
-    $scores['overallScore'] = round($totalScore / 3, 1);
-
+    if ($totalScore == 0) {
+        $scores['serviceScore'] = '*';
+        $scores['foodScore'] = '*';
+        $scores['ambianceScore'] = '*';
+        $scores['totalScore'] = '*';
+        $scores['overallScore'] = '*';
+    } else {
+        $scores['serviceScore'] = $serviceScore;
+        $scores['foodScore'] = $foodScore;
+        $scores['ambianceScore'] = $ambianceScore;
+        $scores['totalScore'] = $totalScore;
+        $scores['overallScore'] = round($totalScore / 3, 1);
+    }
     return $scores;
 }
 
@@ -349,3 +362,10 @@ function query_post_type($query)
     return null;
 }
 
+function pronamic_google_maps_address()
+{
+    global $post;
+
+    $address = get_post_meta($post->ID, Pronamic_Google_Maps_Post::META_KEY_ADDRESS, true);
+    echo $address;
+}

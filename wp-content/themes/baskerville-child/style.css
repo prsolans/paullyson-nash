@@ -12,6 +12,7 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
+
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
 .nocomments {display: none;}
@@ -24,6 +25,11 @@
 .ratingBlock label {width: 100px; display: inline-block;}
 
 .ratingTable h1 { font-size: 2rem; margin: 15px 0;}
+
+.ratingTable label {
+    font-size: .8rem;
+    font-style: italic;
+}
 
 .ratingTable table {width: 100%;}
 
