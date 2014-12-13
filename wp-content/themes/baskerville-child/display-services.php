@@ -25,8 +25,8 @@ Template Name: Services (All)
 
             <?php
 
-            display_ratings_table('service', 'PRS');
-            display_ratings_table('service', 'Allykc');
+            display_user_ratings_table('service', 'PRS');
+            display_user_ratings_table('service', 'Allykc');
 
             ?>
             <div class="cleardiv">&nbsp;</div>

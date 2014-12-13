@@ -13,11 +13,7 @@ Template Name: Restaurants (All)
 
 <?php get_header(); ?>
 
-
     <div class="wrapper section medium-padding">
-
-
-        <!-- /page-title -->
 
         <div class="content section-inner" style="width: 85%">
 
@@ -26,19 +22,20 @@ Template Name: Restaurants (All)
             display_page_block_copy();
             ?>
 
-
             <?php
-
             display_restaurants_overall();
-
-            display_ratings_table('restaurant', 'PRS');
-            display_ratings_table('restaurant', 'Allykc');
-
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->
 
     </div> <!-- /wrapper -->
+    <script>
+        jQuery(document).ready(function () {
+                jQuery("#overallScores").tablesorter({sortList: [[1, 1]]});
 
+            }
+        );
+
+    </script>
 <?php get_footer(); ?>

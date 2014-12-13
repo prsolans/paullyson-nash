@@ -26,8 +26,8 @@ Template Name: Experiences (All)
 
             <?php
 
-            display_ratings_table('experience', 'PRS');
-            display_ratings_table('experience', 'Allykc');
+            display_user_ratings_table('experience', 'PRS');
+            display_user_ratings_table('experience', 'Allykc');
 
             ?>
             <div class="cleardiv">&nbsp;</div>

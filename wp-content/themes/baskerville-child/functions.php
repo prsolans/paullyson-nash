@@ -1,5 +1,23 @@
 <?php
 
+add_action('wp_enqueue_scripts', 'add_custom_theme_assets');
+/**
+ * Add scripts and stylesheets specific to this child theme
+ */
+function add_custom_theme_assets()
+{
+
+    wp_register_script(
+        'tablesorter',
+        get_template_directory_uri() . '-child/js/tablesorter.js',
+        array('jquery'),
+        '2.0',
+        true
+    );
+
+    wp_enqueue_script('tablesorter');
+    wp_enqueue_style('tablesorter', get_template_directory_uri() . '-child/styles/tablesorter/tablesorter.css');
+}
 
 add_action('init', 'create_restaurant_post_type');
 /**
@@ -18,7 +36,7 @@ function create_restaurant_post_type()
             'menu_position' => 4,
             'menu_icon' => 'dashicons-location',
             'taxonomies' => array('category', 'post_tag'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         )
     );
 }
@@ -40,7 +58,7 @@ function create_experience_post_type()
             'menu_position' => 4,
             'menu_icon' => 'dashicons-smiley',
             'taxonomies' => array('category', 'post_tag'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         )
     );
 }
@@ -62,7 +80,7 @@ function create_service_post_type()
             'menu_position' => 4,
             'menu_icon' => 'dashicons-art',
             'taxonomies' => array('category', 'post_tag'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         )
     );
 }
@@ -84,7 +102,7 @@ function create_shop_post_type()
             'menu_position' => 4,
             'menu_icon' => 'dashicons-cart',
             'taxonomies' => array('category', 'post_tag'),
-            'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         )
     );
 
@@ -117,40 +135,38 @@ function display_page_block_copy()
  * @param string $posttype - Post type for the ratings
  * @param string $username - Author name whose table will be displayes
  */
-function display_ratings_table($posttype, $username)
+function display_user_ratings_table($posttype, $username)
 {
     $posts = get_posts(array(
         'numberposts' => -1,
         'post_type' => $posttype
     ));
 
-    if($posttype == 'restaurant'){
+    if ($posttype == 'restaurant') {
         display_restaurant_table($posts, $username);
-    }
-    elseif($posttype == 'experience'){
+    } elseif ($posttype == 'experience') {
         display_experience_table($posts, $username);
-    }
-    elseif($posttype == 'shop'){
+    } elseif ($posttype == 'shop') {
         display_shop_table($posts, $username);
-    }
-    elseif($posttype == 'service'){
+    } elseif ($posttype == 'service') {
         display_service_table($posts, $username);
     }
 
 }
 
 /**
- * Display table of ratings for restaurants
+ * Display table of restaurant ratings for a specific author
  * @param array $posts - Collection of posts
  * @param string $username - Related to a specific author
  */
-function display_restaurant_table($posts, $username) {
+function display_restaurant_table($posts, $username)
+{
     $usernameToLower = strtolower($username);
 
     if ($posts) {
         echo '<div class="ratingTable">
                             <h1>' . $username . '</h1>
-                            <table>
+                            <table id="' . $usernameToLower . 'Scores">
                                 <thead>
                                     <th>Restaurant</th><th class="center">Service</th><th class="center">Food</th><th class="center">Ambiance</th></tr>
                                 </thead>
@@ -167,6 +183,9 @@ function display_restaurant_table($posts, $username) {
     }
 }
 
+/**
+ *  Display table of overall restaurant ratings
+ */
 function display_restaurants_overall()
 {
     $posts = get_posts(array(
@@ -174,27 +193,25 @@ function display_restaurants_overall()
         'post_type' => 'restaurant'
     ));
 
-
     if ($posts) {
         echo '<div class="ratingTable overallRatingTable">
-        <table>
+        <table id="overallScores" class="tablesorter">
             <thead>
                 <th>Restaurant</th>
-                <th class="center">Service</th>
-                <th class="center">Food</th>
-                <th class="center">Ambiance</th>
                 <th class="center">Overall</th>
+                <th class="center">Food</th>
+                <th class="center">Service</th>
+                <th class="center">Ambiance</th>
                 <th class="center">Date</th>
             </thead>
             <tbody>';
         foreach ($posts as $post) {
-
-            $scores = get_overall_rating_score($post->ID);
+            $scores = get_all_ratings_for_a_restaurant($post->ID);
             echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . '</a ></td >';
+            echo '<td class="center">' . $scores['overallScore'] . '</td >';
             echo '<td class="center">' . $scores['foodScore'] . '</td >';
             echo '<td class="center">' . $scores['serviceScore'] . '</td >';
             echo '<td class="center">' . $scores['ambianceScore'] . '</td >';
-            echo '<td class="center">' . $scores['overallScore'] . '</td >';
             echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
         }
 
@@ -203,11 +220,12 @@ function display_restaurants_overall()
 }
 
 /**
- * Display table of ratings for experiences
+ * Display table of experience ratings for a specific author
  * @param array $posts - Collection of posts
  * @param string $username - Related to a specific author
  */
-function display_experience_table($posts, $username) {
+function display_experience_table($posts, $username)
+{
     $usernameToLower = strtolower($username);
 
     if ($posts) {
@@ -230,11 +248,12 @@ function display_experience_table($posts, $username) {
 }
 
 /**
- * Display table of ratings for experiences
+ * Display table of shop ratings for a specific author
  * @param array $posts - Collection of posts
  * @param string $username - Related to a specific author
  */
-function display_shop_table($posts, $username) {
+function display_shop_table($posts, $username)
+{
     $usernameToLower = strtolower($username);
 
     if ($posts) {
@@ -257,11 +276,12 @@ function display_shop_table($posts, $username) {
 }
 
 /**
- * Display table of ratings for experiences
+ * Display table of service ratings for a specfic author
  * @param array $posts - Collection of posts
  * @param string $username - Related to a specific author
  */
-function display_service_table($posts, $username) {
+function display_service_table($posts, $username)
+{
     $usernameToLower = strtolower($username);
 
     if ($posts) {
@@ -283,10 +303,16 @@ function display_service_table($posts, $username) {
     }
 }
 
-function get_overall_rating_score($postId) {
-    $serviceScore = (get_field('prs_restaurant_service', $postId) + get_field('allykc_restaurant_service', $postId))/2;
-    $foodScore = (get_field('prs_restaurant_food', $postId) + get_field('allykc_restaurant_food', $postId))/2;
-    $ambianceScore = (get_field('prs_restaurant_ambiance', $postId) + get_field('allykc_restaurant_ambiance', $postId))/2;
+/**
+ * Create array of all ratings for a single restaurant
+ * @param $postId
+ * @return array
+ */
+function get_all_ratings_for_a_restaurant($postId)
+{
+    $serviceScore = (get_field('prs_restaurant_service', $postId) + get_field('allykc_restaurant_service', $postId)) / 2;
+    $foodScore = (get_field('prs_restaurant_food', $postId) + get_field('allykc_restaurant_food', $postId)) / 2;
+    $ambianceScore = (get_field('prs_restaurant_ambiance', $postId) + get_field('allykc_restaurant_ambiance', $postId)) / 2;
     $totalScore = $serviceScore + $foodScore + $ambianceScore;
 
     $scores = array();
@@ -294,21 +320,28 @@ function get_overall_rating_score($postId) {
     $scores['foodScore'] = $foodScore;
     $scores['ambianceScore'] = $ambianceScore;
     $scores['totalScore'] = $totalScore;
-    $scores['overallScore'] = round($totalScore/3, 1);
+    $scores['overallScore'] = round($totalScore / 3, 1);
 
     return $scores;
 }
 
 add_filter('pre_get_posts', 'query_post_type');
 
-function query_post_type($query) {
-    if(is_category() || is_tag()) {
+/**
+ * Allow custom post types to appear on tag/category pages
+ * https://wordpress.org/support/topic/custom-post-type-tagscategories-archive-page
+ * @param $query
+ * @return null
+ */
+function query_post_type($query)
+{
+    if (is_category() || is_tag()) {
         $post_type = get_query_var('post_type');
-        if(!$post_type) {
+        if (!$post_type) {
             $post_type = array('restaurant', 'service', 'shop', 'experience', 'nav_menu_item');
         }
         if (!empty($query)) {
-            $query->set('post_type',$post_type);
+            $query->set('post_type', $post_type);
         }
         return $query;
     }

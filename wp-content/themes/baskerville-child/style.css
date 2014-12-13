@@ -33,6 +33,10 @@
 
 .ratingTable table td.center, .ratingTable table th.center {text-align: center; }
 
+.ratingTable table td.header, .ratingTable table th.header {
+    padding: 10px 0;
+}
+
 .overallRatingTable { width: 100%; }
 
 @media (max-width: 768px) {

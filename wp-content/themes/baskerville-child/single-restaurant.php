@@ -45,7 +45,8 @@ $format = get_post_format();
 
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
                                   title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-        <h3><?php $scores = get_overall_rating_score(get_the_ID());
+
+        <h3><?php $scores = get_all_ratings_for_a_restaurant(get_the_ID());
             echo "Overall Score: ".$scores['overallScore'];
             ?></h3>
 

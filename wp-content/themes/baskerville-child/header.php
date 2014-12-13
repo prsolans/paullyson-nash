@@ -6,14 +6,15 @@
 		
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-		<link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,700' rel='stylesheet' type='text/css'>
 		<title><?php wp_title('|', true, 'right'); ?></title>
-				
-		<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+
+        <?php if (is_singular()) wp_enqueue_script("comment-reply"); ?>
 		 
 		<?php wp_head(); ?>
-	
-	</head>
+
+
+    </head>
 	
 	<body <?php body_class(); ?>>
 	
