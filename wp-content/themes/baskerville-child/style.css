@@ -15,11 +15,6 @@
 
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
-.post-header {
-    background: #dbdbdb;
-    border-bottom: 5px solid #d0d0d0;
-}
-
 .nocomments {display: none;}
 
 .single .post-content {

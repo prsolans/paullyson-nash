@@ -93,6 +93,7 @@ $format = get_post_format();
         ?>
 
         <?php the_content(); ?>
+
         <div class="clear"></div>
 
         <div class="location-info-block">
