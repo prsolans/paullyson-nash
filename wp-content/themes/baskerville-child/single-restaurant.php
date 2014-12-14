@@ -17,30 +17,6 @@ $format = get_post_format();
 
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php if ($format == 'quote' || $format == 'link' || $format == 'audio' || $format == 'status' || $format == 'chat') : ?>
-
-        <?php if (has_post_thumbnail()) : ?>
-
-            <div class="featured-media">
-
-                <?php the_post_thumbnail('post-image'); ?>
-
-                <?php if (!empty(get_post(get_post_thumbnail_id())->post_excerpt)) : ?>
-
-                    <div class="media-caption-container">
-
-                        <p class="media-caption"><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></p>
-
-                    </div>
-
-                <?php endif; ?>
-
-            </div> <!-- /featured-media -->
-
-        <?php endif; ?>
-
-    <?php endif; ?>
-
     <div class="post-header">
 
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
@@ -93,6 +69,7 @@ $format = get_post_format();
         ?>
 
         <?php the_content(); ?>
+
         <div class="clear"></div>
 
         <div class="location-info-block">

@@ -23,7 +23,13 @@ Template Name: Restaurants (All)
             ?>
 
             <?php
-            display_restaurants_overall();
+            display_category_ratings_table('restaurant', 'Restaurants');
+            display_category_ratings_table('restaurant', 'Bars');
+            display_category_ratings_table('restaurant', 'Fast');
+            display_category_ratings_table('experience', 'Sports');
+            display_category_ratings_table('service', '');
+            display_category_ratings_table('shop', '');
+
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>
@@ -32,10 +38,9 @@ Template Name: Restaurants (All)
     </div> <!-- /wrapper -->
     <script>
         jQuery(document).ready(function () {
-                jQuery("#overallScores").tablesorter({sortList: [[1, 1]]});
-
+                jQuery("#overallScores-Restaurants").tablesorter({sortList: [[1, 1]]});
+                jQuery("#overallScores-Bars").tablesorter({sortList: [[1, 1]]});
             }
         );
-
     </script>
 <?php get_footer(); ?>

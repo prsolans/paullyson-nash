@@ -15,11 +15,6 @@
 
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
-.post-header {
-    background: #dbdbdb;
-    border-bottom: 5px solid #d0d0d0;
-}
-
 .nocomments {display: none;}
 
 .single .post-content {
@@ -58,12 +53,12 @@
     width: 100%;
 }
 
-.rating-table table th {
-    font-weight: bold;
-}
-
 .rating-table table td {
     line-height: 2 !important;
+}
+
+.rating-table table td.name-cell {
+    min-width: 140px;
 }
 
 .rating-table table td.center, .rating-table table th.center {
@@ -72,6 +67,10 @@
 
 .rating-table table td.header, .rating-table table th.header {
     padding: 10px 0;
+}
+
+.rating-table table th {
+    font-weight: bold;
 }
 
 .overall-rating-table {
@@ -83,6 +82,10 @@
         width: 100%;
         margin: 10px 0;
         clear: both;
+    }
+
+    .rating-table table td.collapsible, .rating-table table th.collapsible {
+        display: none;
     }
 }
 
