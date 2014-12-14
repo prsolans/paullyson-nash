@@ -5,12 +5,8 @@
  * Version: 0.0.1
  * Author: prsolans
  * License: Yes, please
- */
-
-/**
+ *
  * Functions specific to Experience custom post type
- * Created by PhpStorm.
- * User: prsolans
  * Date: 12/13/14
  * Time: 4:40 PM
  */
@@ -47,7 +43,7 @@ function display_experience_table($posts, $username)
     $usernameToLower = strtolower($username);
 
     if ($posts) {
-        echo '<div class="ratingTable">
+        echo '<div class="rating-table">
             <h1>' . $username . '</h1>
             <table>
                 <thead>
@@ -65,7 +61,6 @@ function display_experience_table($posts, $username)
     }
 }
 
-
 /**
  *  Display table of overall experience ratings
  */
@@ -77,7 +72,7 @@ function display_experiences_overall()
     ));
 
     if ($posts) {
-        echo '<div class="ratingTable overallRatingTable">
+        echo '<div class="rating-table overall-rating-table">
         <table id="overallScores" class="tablesorter">
             <thead>
                 <th>Restaurant</th>
@@ -102,7 +97,7 @@ function display_experiences_overall()
             echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
         }
 
-        echo '</tbody></table><label>* - indicates rating is TBD</label></div>';
+        echo '</tbody></table><label>* - complete ratings to come</label></div>';
     }
 }
 

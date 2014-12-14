@@ -159,12 +159,12 @@ $format = get_post_format();
         <?php the_content(); ?>
 
         <?php
-        echo '<div class="ratingBlock"><h3>PRS says</h3>';
+        echo '<div class="rating-block"><h3>PRS says</h3>';
         echo '<label>Venue:</label> '. get_field('prs_experience_venue');
         echo '<br/><label>Fun:</label> '. get_field('prs_experience_fun');
         echo '<br/><label>Intangibles:</label> '. get_field('prs_experience_intangibles');
         echo '</div>';
-        echo '<div class="ratingBlock"><h3>Allykc says</h3>';
+        echo '<div class="rating-block"><h3>Allykc says</h3>';
         echo '<label>Venue:</label> '. get_field('allykc_experience_venue');
         echo '<br/><label>Fun:</label> '. get_field('allykc_experience_fun');
         echo '<br/><label>Intangibles:</label> '. get_field('allykc_experience_intangibles');

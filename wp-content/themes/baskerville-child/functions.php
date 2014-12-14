@@ -94,5 +94,18 @@ function pronamic_google_maps_address()
     global $post;
 
     $address = get_post_meta($post->ID, Pronamic_Google_Maps_Post::META_KEY_ADDRESS, true);
-    echo $address;
+    return $address;
+}
+
+function pronamic_google_maps_link()
+{
+
+    $q = get_the_title() . ' ' . strip_tags(pronamic_google_maps_address());
+
+    printf(
+        '<a href="%s" target="_blank">%s</a>',
+        add_query_arg('q', $q, 'https://www.google.com/maps'),
+        __('View Full-Size Map', 'text_domain')
+    );
+
 }

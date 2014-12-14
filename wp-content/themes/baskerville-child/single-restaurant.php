@@ -46,7 +46,8 @@ $format = get_post_format();
         <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"
                                   title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-        <h3><?php $scores = get_all_ratings_for_a_restaurant(get_the_ID());
+        <h3><?php echo strip_tags(pronamic_google_maps_address()); ?>
+            <br/><?php $scores = get_all_ratings_for_a_restaurant(get_the_ID());
             echo "Overall Score: ".$scores['overallScore'];
             ?></h3>
 
@@ -79,20 +80,30 @@ $format = get_post_format();
     <div class="post-content">
 
         <?php
-            echo '<div class="ratingBlock"><h3>PRS says</h3>';
+        echo '<div class="rating-block"><h3>PRS says</h3>';
             echo '<label>Service:</label> '. get_field('prs_restaurant_service');
             echo '<br/><label>Food:</label> '. get_field('prs_restaurant_food');
             echo '<br/><label>Ambiance:</label> '. get_field('prs_restaurant_ambiance');
             echo '</div>';
-            echo '<div class="ratingBlock"><h3>Allykc says</h3>';
+        echo '<div class="rating-block"><h3>Allykc says</h3>';
             echo '<label>Service:</label> '. get_field('allykc_restaurant_service');
             echo '<br/><label>Food:</label> '. get_field('allykc_restaurant_food');
             echo '<br/><label>Ambiance:</label> '. get_field('allykc_restaurant_ambiance');
             echo '</div>';
         ?>
 
-        <?php pronamic_google_maps_address(); ?>
         <?php the_content(); ?>
+        <div class="clear"></div>
+
+        <div class="location-info-block">
+            <div class="one-half"><h3><?php echo get_the_title(); ?></h3><?php echo pronamic_google_maps_address(); ?>
+                <br>
+                <?php pronamic_google_maps_link(); ?></div>
+            <div class="one-half"><?php echo do_shortcode('[googlemaps height=300 draggable=true zoomControl=true]'); ?>
+
+
+            </div>
+        </div>
 
         <?php wp_link_pages(); ?>
 

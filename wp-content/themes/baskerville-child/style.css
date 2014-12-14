@@ -15,45 +15,104 @@
 
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
+.post-header {
+    background: #dbdbdb;
+    border-bottom: 5px solid #d0d0d0;
+}
+
 .nocomments {display: none;}
 
 .single .post-content {
-    padding-top: 0px;
+    padding-top: 0;
+}
+
+.pgm .canvas {
+    width: 100% !important;
 }
 
 /* =Ratings display starts here
 -------------------------------------------------------------- */
 
-.ratingBlock, .ratingTable { width: 50%; margin: 10px 0 !important; float: left; }
+.rating-block, .rating-table {
+    width: 50%;
+    margin: 10px 0 !important;
+    float: left;
+}
 
-.ratingBlock label {width: 100px; display: inline-block;}
+.rating-block label {
+    width: 100px;
+    display: inline-block;
+}
 
-.ratingTable h1 { font-size: 2rem; margin: 15px 0;}
+.rating-table h1 {
+    font-size: 2rem;
+    margin: 15px 0;
+}
 
-.ratingTable label {
+.rating-table label {
     font-size: .8rem;
     font-style: italic;
 }
 
-.ratingTable table {width: 100%;}
+.rating-table table {
+    width: 100%;
+}
 
-.ratingTable table th { font-weight: bold; }
+.rating-table table th {
+    font-weight: bold;
+}
 
-.ratingTable table td { line-height: 2 !important;}
+.rating-table table td {
+    line-height: 2 !important;
+}
 
-.ratingTable table td.center, .ratingTable table th.center {text-align: center; }
+.rating-table table td.center, .rating-table table th.center {
+    text-align: center;
+}
 
-.ratingTable table td.header, .ratingTable table th.header {
+.rating-table table td.header, .rating-table table th.header {
     padding: 10px 0;
 }
 
-.overallRatingTable { width: 100%; }
+.overall-rating-table {
+    width: 100%;
+}
 
 @media (max-width: 768px) {
-    .ratingTable { width: 100%; margin: 10px 0; clear: both; }
+    .rating-table {
+        width: 100%;
+        margin: 10px 0;
+        clear: both;
+    }
+}
+
+/* =Location block classes
+-------------------------------------------------------------- */
+.location-info-block {
+    border-top: 5px solid black;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.location-info-block h3 {
+    margin-top: 0;
 }
 
 /* =Theme utility classes
 -------------------------------------------------------------- */
 .cleardiv {clear: both; height: 20px}
+
+.one-half {
+    width: 50%;
+    float: left;
+}
+
+@media (max-width: 768px) {
+    .one-half {
+        width: 100%;
+        margin: 10px 0;
+        clear: both;
+    }
+}
+
 
