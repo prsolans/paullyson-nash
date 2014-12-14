@@ -22,12 +22,8 @@ Template Name: Shops (All)
             display_page_block_copy();
             ?>
 
-
             <?php
-
-            display_user_ratings_table('shop', 'PRS');
-            display_user_ratings_table('shop', 'Allykc');
-
+            display_shops_overall();
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>

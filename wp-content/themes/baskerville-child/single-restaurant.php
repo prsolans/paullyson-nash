@@ -53,92 +53,10 @@ $format = get_post_format();
     </div>
     <!-- /post-header -->
 
-    <?php
 
-    if ($format == 'video') : ?>
-
-        <?php $video_url = get_post_meta($post->ID, 'video_url', true); ?>
-
-        <div class="featured-media">
-
-            <?php if (strpos($video_url, '.mp4') !== false) : ?>
-
-                <video controls>
-                    <source src="<?php echo $video_url; ?>" type="video/mp4">
-                </video>
-
-            <?php else : ?>
-
-                <?php
-
-                $embed_code = wp_oembed_get($video_url);
-
-                echo $embed_code;
-
-                ?>
-
-            <?php endif; ?>
-
-        </div>
-
-    <?php elseif ($format == 'audio') : ?>
-
-        <?php $audio_url = get_post_meta($post->ID, 'audio_url', true); ?>
-
-        <div class="post-audio">
-
-            <audio controls="controls" id="audio-player">
-
-                <source src="<?php echo $audio_url; ?>"/>
-
-            </audio>
-
-        </div> <!-- /post-audio -->
 
     <?php
-    elseif ($format == 'quote') : ?>
-
-        <?php $quote_content = get_post_meta($post->ID, 'quote_content', true); ?>
-        <?php $quote_attribution = get_post_meta($post->ID, 'quote_attribution', true); ?>
-
-        <div class="post-quote">
-
-            <blockquote><?php echo $quote_content; ?></blockquote>
-
-            <?php if ($quote_attribution != '') : ?>
-
-                <cite><?php echo $quote_attribution; ?></cite>
-
-            <?php endif; ?>
-
-        </div> <!-- /post-quote -->
-
-    <?php
-    elseif ($format == 'link') : ?>
-
-        <?php $link_url = get_post_meta($post->ID, 'link_url', true); ?>
-        <?php $link_title = get_post_meta($post->ID, 'link_title', true); ?>
-
-        <div class="post-link">
-
-            <p><?php echo $link_title; ?></p>
-
-            <a href="<?php echo $link_url; ?>"
-               title="<?php echo $link_title; ?>"><?php echo url_to_domain($link_url); ?></a>
-
-        </div> <!-- /post-link -->
-
-    <?php
-    elseif ($format == 'gallery') : ?>
-
-        <div class="featured-media">
-
-            <?php baskerville_flexslider('post-image'); ?>
-
-        </div> <!-- /featured-media -->
-
-    <?php
-    elseif (has_post_thumbnail()) : ?>
+    if (has_post_thumbnail()) : ?>
 
         <div class="featured-media">
 
@@ -159,8 +77,7 @@ $format = get_post_format();
     <?php endif; ?>
 
     <div class="post-content">
-        <?php pronamic_google_maps_address(); ?>
-        <?php the_content(); ?>
+
         <?php
             echo '<div class="ratingBlock"><h3>PRS says</h3>';
             echo '<label>Service:</label> '. get_field('prs_restaurant_service');
@@ -173,6 +90,9 @@ $format = get_post_format();
             echo '<br/><label>Ambiance:</label> '. get_field('allykc_restaurant_ambiance');
             echo '</div>';
         ?>
+
+        <?php pronamic_google_maps_address(); ?>
+        <?php the_content(); ?>
 
         <?php wp_link_pages(); ?>
 

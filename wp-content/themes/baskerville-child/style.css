@@ -17,6 +17,10 @@
 
 .nocomments {display: none;}
 
+.single .post-content {
+    padding-top: 0px;
+}
+
 /* =Ratings display starts here
 -------------------------------------------------------------- */
 

@@ -23,13 +23,10 @@ Template Name: Experiences (All)
             display_page_block_copy();
             ?>
 
-
             <?php
-
-            display_user_ratings_table('experience', 'PRS');
-            display_user_ratings_table('experience', 'Allykc');
-
+            display_experiences_overall();
             ?>
+
             <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->

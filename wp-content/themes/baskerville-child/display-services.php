@@ -22,12 +22,8 @@ Template Name: Services (All)
             display_page_block_copy();
             ?>
 
-
             <?php
-
-            display_user_ratings_table('service', 'PRS');
-            display_user_ratings_table('service', 'Allykc');
-
+            display_services_overall();
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>

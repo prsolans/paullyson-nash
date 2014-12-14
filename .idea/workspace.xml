@@ -4,7 +4,29 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="">
+    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="Refactored custom post type code into separate class files.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/akismet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/akismet.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/form.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/_inc/img/logo-full-2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-admin.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet-widget.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/class.akismet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/get.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/notice.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/start.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/stats.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/views/strict.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/akismet/wrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/hello.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
@@ -36,48 +58,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css">
+      <file leaf-file-name="Services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-service-post-type/Services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63144964" vertical-offset="4423" max-vertical-offset="5625">
-              <caret line="312" column="34" selection-start-line="312" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+            <state vertical-scroll-proportion="-20.416666" vertical-offset="1640" max-vertical-offset="2220">
+              <caret line="142" column="1" selection-start-line="66" selection-start-column="0" selection-end-line="142" selection-end-column="1" />
               <folding>
-                <marker date="1418506131000" expanded="true" signature="4547:4947" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="4674:4947" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="4714:4907" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="5796:6183" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="5851:6183" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="5871:6163" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="7241:7509" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="7300:7509" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="7324:7485" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="8399:8661" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="8458:8661" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="8482:8637" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="9538:9801" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="9597:9801" placeholder="..." />
-                <marker date="1418506131000" expanded="true" signature="9621:9777" placeholder="..." />
+                <element signature="e#6#184#0#PHP" expanded="true" />
+                <marker date="1418516217000" expanded="true" signature="1257:1520" placeholder="..." />
+                <marker date="1418516217000" expanded="true" signature="1316:1520" placeholder="..." />
+                <marker date="1418516217000" expanded="true" signature="1340:1496" placeholder="..." />
+                <marker date="1418516217000" expanded="true" signature="2350:2735" placeholder="..." />
+                <marker date="1418516217000" expanded="true" signature="2405:2735" placeholder="..." />
+                <marker date="1418516217000" expanded="true" signature="2425:2715" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-restaurant.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php">
+      <file leaf-file-name="Shops.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-shop-post-type/Shops.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375" vertical-offset="495" max-vertical-offset="4935">
-              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.5673077" vertical-offset="1205" max-vertical-offset="2235">
+              <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+              <folding>
+                <element signature="e#6#178#0#PHP" expanded="true" />
+                <marker date="1418516863000" expanded="true" signature="1226:1488" placeholder="..." />
+                <marker date="1418516863000" expanded="true" signature="1285:1488" placeholder="..." />
+                <marker date="1418516863000" expanded="true" signature="1309:1464" placeholder="..." />
+                <marker date="1418516863000" expanded="true" signature="2302:2689" placeholder="..." />
+                <marker date="1418516863000" expanded="true" signature="2357:2689" placeholder="..." />
+                <marker date="1418516863000" expanded="true" signature="2377:2669" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Restaurants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type/Restaurants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.1666665" vertical-offset="1730" max-vertical-offset="2250">
+              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+              <folding>
+                <element signature="e#6#190#0#PHP" expanded="true" />
+                <marker date="1418515690000" expanded="true" signature="1297:1697" placeholder="..." />
+                <marker date="1418515690000" expanded="true" signature="1424:1697" placeholder="..." />
+                <marker date="1418515690000" expanded="true" signature="1464:1657" placeholder="..." />
+                <marker date="1418515690000" expanded="true" signature="2546:2933" placeholder="..." />
+                <marker date="1418515690000" expanded="true" signature="2601:2933" placeholder="..." />
+                <marker date="1418515690000" expanded="true" signature="2621:2913" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,10 +133,7 @@
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields/core/actions/export.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-experience.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-service.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-shop.php" />
@@ -117,8 +144,19 @@
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/styles/tablesorter/tablesorter.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/classes/Restaurants.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/classes/Experiences.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/classes/Services.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/classes/Shop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-experience-post-type/Experiences.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type/Restaurants.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-service-post-type/Services.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-shop-post-type/Shops.php" />
       </list>
     </option>
   </component>
@@ -127,10 +165,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="833" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -287,6 +323,94 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="wp-content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="plugins">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="prs-shop-post-type">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="htdocs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="wp-content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="plugins">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="prs-service-post-type">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="htdocs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="wp-content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="plugins">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="prs-restaurant-post-type">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="htdocs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="wp-content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="plugins">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="prs-experience-post-type">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="htdocs">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT=".idea">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
@@ -320,9 +444,14 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="LayoutCode.rearrangeEntriesPHP" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="TODO_SCOPE" value="Theme" />
     <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type" />
+    </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.functions.php">
     <configuration default="false" name="functions.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://50.16.205.23/paullyson/wordpress/wp-content/themes/baskerville-child/functions.php">
@@ -417,7 +546,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418491489289</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary=" Set code to confirm whether both authors have submitted reviews&#10;">
+      <created>1418506217225</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1418506217225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -441,7 +576,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1400" height="833" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -449,15 +584,15 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39921466" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12543963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921466" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21857142" sideWeight="0.16775599" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.13811189" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21857142" sideWeight="0.832244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.86013985" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921466" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -491,7 +626,9 @@
     <MESSAGE value="Updated all four menu page displays and accompanying functions, minor style updates" />
     <MESSAGE value="Updated individual custom post presentation, added metric for restaurants overall rating" />
     <MESSAGE value="Created overall restaurants table, centered TH in style.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created overall restaurants table, centered TH in style.css" />
+    <MESSAGE value=" Set code to confirm whether both authors have submitted reviews&#10;" />
+    <MESSAGE value="Refactored custom post type code into separate class files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored custom post type code into separate class files." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -524,23 +661,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1245" max-vertical-offset="1380">
           <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
-          <folding>
-            <marker date="1418506131000" expanded="true" signature="4547:4947" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="4674:4947" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="4714:4907" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5796:6183" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5851:6183" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5871:6163" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7241:7509" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7300:7509" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7324:7485" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8399:8661" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8458:8661" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8482:8637" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9538:9801" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9597:9801" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9621:9777" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,41 +760,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2083333" vertical-offset="163" max-vertical-offset="630">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="e#253#271#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.5" vertical-offset="0" max-vertical-offset="2235">
           <caret line="138" column="24" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84782606" vertical-offset="0" max-vertical-offset="615">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-          <folding>
-            <element signature="e#246#264#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51086956" vertical-offset="155" max-vertical-offset="615">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="e#249#267#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,14 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/akismet/akismet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
@@ -722,17 +805,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/hello.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1369256920000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1369256920000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,50 +860,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48455057" vertical-offset="0" max-vertical-offset="712">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="975">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/single-restaurant.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375" vertical-offset="495" max-vertical-offset="4935">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.66346157" vertical-offset="1050" max-vertical-offset="3735">
+          <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63144964" vertical-offset="4423" max-vertical-offset="5625">
-          <caret line="312" column="34" selection-start-line="312" selection-start-column="0" selection-end-line="313" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-experience-post-type/Experiences.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71153843" vertical-offset="980" max-vertical-offset="2250">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
           <folding>
-            <marker date="1418506131000" expanded="true" signature="4547:4947" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="4674:4947" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="4714:4907" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5796:6183" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5851:6183" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="5871:6163" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7241:7509" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7300:7509" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="7324:7485" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8399:8661" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8458:8661" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="8482:8637" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9538:9801" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9597:9801" placeholder="..." />
-            <marker date="1418506131000" expanded="true" signature="9621:9777" placeholder="..." />
+            <element signature="e#6#190#0#PHP" expanded="true" />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418515224000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66346157" vertical-offset="0" max-vertical-offset="660">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-service-post-type/Services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.416666" vertical-offset="1640" max-vertical-offset="2220">
+          <caret line="142" column="1" selection-start-line="66" selection-start-column="0" selection-end-line="142" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#184#0#PHP" expanded="true" />
+            <marker date="1418516217000" expanded="true" signature="1257:1520" placeholder="..." />
+            <marker date="1418516217000" expanded="true" signature="1316:1520" placeholder="..." />
+            <marker date="1418516217000" expanded="true" signature="1340:1496" placeholder="..." />
+            <marker date="1418516217000" expanded="true" signature="2350:2735" placeholder="..." />
+            <marker date="1418516217000" expanded="true" signature="2405:2735" placeholder="..." />
+            <marker date="1418516217000" expanded="true" signature="2425:2715" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="555">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66346157" vertical-offset="0" max-vertical-offset="555">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type/Restaurants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1666665" vertical-offset="1730" max-vertical-offset="2250">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#190#0#PHP" expanded="true" />
+            <marker date="1418515690000" expanded="true" signature="1297:1697" placeholder="..." />
+            <marker date="1418515690000" expanded="true" signature="1424:1697" placeholder="..." />
+            <marker date="1418515690000" expanded="true" signature="1464:1657" placeholder="..." />
+            <marker date="1418515690000" expanded="true" signature="2546:2933" placeholder="..." />
+            <marker date="1418515690000" expanded="true" signature="2601:2933" placeholder="..." />
+            <marker date="1418515690000" expanded="true" signature="2621:2913" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-shop-post-type/Shops.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5673077" vertical-offset="1205" max-vertical-offset="2235">
+          <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+          <folding>
+            <element signature="e#6#178#0#PHP" expanded="true" />
+            <marker date="1418516863000" expanded="true" signature="1226:1488" placeholder="..." />
+            <marker date="1418516863000" expanded="true" signature="1285:1488" placeholder="..." />
+            <marker date="1418516863000" expanded="true" signature="1309:1464" placeholder="..." />
+            <marker date="1418516863000" expanded="true" signature="2302:2689" placeholder="..." />
+            <marker date="1418516863000" expanded="true" signature="2357:2689" placeholder="..." />
+            <marker date="1418516863000" expanded="true" signature="2377:2669" placeholder="..." />
           </folding>
         </state>
       </provider>
