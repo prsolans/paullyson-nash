@@ -26,10 +26,6 @@ Template Name: Restaurants (All)
             display_category_ratings_table('restaurant', 'Restaurants');
             display_category_ratings_table('restaurant', 'Bars');
             display_category_ratings_table('restaurant', 'Fast');
-            display_category_ratings_table('experience', 'Sports');
-            display_category_ratings_table('service', '');
-            display_category_ratings_table('shop', '');
-
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>
@@ -40,6 +36,7 @@ Template Name: Restaurants (All)
         jQuery(document).ready(function () {
                 jQuery("#overallScores-Restaurants").tablesorter({sortList: [[1, 1]]});
                 jQuery("#overallScores-Bars").tablesorter({sortList: [[1, 1]]});
+                jQuery("#overallScores-Fast").tablesorter({sortList: [[1, 1]]});
             }
         );
     </script>

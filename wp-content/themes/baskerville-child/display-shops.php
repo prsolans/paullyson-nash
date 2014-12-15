@@ -23,12 +23,17 @@ Template Name: Shops (All)
             ?>
 
             <?php
-            display_shops_overall();
+            display_category_ratings_table('shop', '');
             ?>
             <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->
 
     </div> <!-- /wrapper -->
-
+    <script>
+        jQuery(document).ready(function () {
+                jQuery("#overallScores-").tablesorter({sortList: [[1, 1]]});
+            }
+        );
+    </script>
 <?php get_footer(); ?>
