@@ -1,12 +1,5 @@
 <?php
 /**
- * Plugin Name: AKC/PRS - Shops
- * Description: Plugin for creating custom post type for rating shops.
- * Version: 0.0.1
- * Author: prsolans
- * License: Yes, please
- */
-/**
  * Functions specific to Shop custom post type
  * Created by PhpStorm.
  * User: prsolans

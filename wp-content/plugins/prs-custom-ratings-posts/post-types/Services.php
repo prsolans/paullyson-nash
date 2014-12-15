@@ -1,12 +1,5 @@
 <?php
 /**
- * Plugin Name: AKC/PRS - Services
- * Description: Plugin for creating custom post type for rating services.
- * Version: 0.0.1
- * Author: prsolans
- * License: Yes, please
- */
-/**
  * Functions specific to Service custom post type
  * Created by PhpStorm.
  * User: prsolans

@@ -1,11 +1,5 @@
 <?php
 /**
- * Plugin Name: AKC/PRS - Experiences
- * Description: Plugin for creating custom post type for rating experiences.
- * Version: 0.0.1
- * Author: prsolans
- * License: Yes, please
- *
  * Functions specific to Experience custom post type
  * Date: 12/13/14
  * Time: 4:40 PM

@@ -1,13 +1,5 @@
 <?php
 /**
- * Plugin Name: AKC/PRS - Restaurants
- * Description: Plugin for creating custom post type for rating restaurants.
- * Version: 0.0.1
- * Author: prsolans
- * License: Yes, please
- */
-
-/**
  * Functions specific to Restaurant custom post type
  * Created by PhpStorm.
  * User: prsolans
