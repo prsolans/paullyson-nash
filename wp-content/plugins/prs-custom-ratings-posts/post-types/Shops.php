@@ -58,47 +58,6 @@ function display_shop_table($posts, $username)
     }
 }
 
-
-/**
- *  Display table of overall shops ratings
- */
-function display_shops_overall()
-{
-    $posts = get_posts(array(
-        'numberposts' => -1,
-        'post_type' => 'shop'
-    ));
-
-    if ($posts) {
-        echo '<div class="rating-table overall-rating-table">
-        <table id="overallScores" class="tablesorter">
-            <thead>
-                <th>Restaurant</th>
-                <th class="center">Overall</th>
-                <th class="center">Ease</th>
-                <th class="center">Quality</th>
-                <th class="center">Ambiance</th>
-                <th class="center">Date</th>
-            </thead>
-            <tbody>';
-        foreach ($posts as $post) {
-            $scores = get_all_ratings_for_a_shop($post->ID);
-            $incomplete = '';
-            if ($scores['incomplete'] == true) {
-                $incomplete = '*';
-            }
-            echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . $incomplete . '</a ></td >';
-            echo '<td class="center">' . $scores['overallScore'] . '</td >';
-            echo '<td class="center">' . $scores['easeScore'] . '</td >';
-            echo '<td class="center">' . $scores['qualityScore'] . '</td >';
-            echo '<td class="center">' . $scores['ambianceScore'] . '</td >';
-            echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
-        }
-
-        echo '</tbody></table><label>* - complete ratings to come</label></div>';
-    }
-}
-
 /**
  * Create array of all ratings for a single service
  * @param $postId

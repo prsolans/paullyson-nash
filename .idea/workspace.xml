@@ -5,22 +5,13 @@
     <option name="CUSTOM_SCOPE_NAME" value="Custom Post Plugins" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="Update presentation for all archive pages to utilize new plugin functions">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/lang/acf-number_slider-sr_RS.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/lang/acf-number_slider.mo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/screenshot-1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/screenshot-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/acf-number-slider.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/lang/acf-number_slider-sr_RS.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/lang/acf-number_slider.po" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/js/input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/css/simple-slider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/js/simple-slider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/js/simple-slider.min.js" />
+    <list default="true" id="756ed74a-ce71-4e0d-a8eb-3a68d1ba1ee0" name="Default" comment="Removed ACF Number Slider plugin">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/admin/options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
@@ -48,68 +39,7 @@
     <favorites_list name="htdocs" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="display-restaurants.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.541667" vertical-offset="155" max-vertical-offset="690">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="41" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display-experiences.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.041666" vertical-offset="95" max-vertical-offset="660">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="39" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display-services.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.416666" vertical-offset="35" max-vertical-offset="630">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display-shops.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="630">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="number-slider-v3.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v3.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="5550">
-              <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="number-slider-v4.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v4.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6179775" vertical-offset="0" max-vertical-offset="4200">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -124,6 +54,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature-admin-options" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -134,16 +69,20 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type/Restaurants.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Restaurants.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-services.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v3.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v4.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/OptionsSettingsPage.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/options.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/admin/options.php" />
       </list>
     </option>
   </component>
@@ -296,6 +235,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prs-allykc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prs-custom-ratings-posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -418,6 +383,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/wp-content/plugins/prs-restaurant-post-type" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/admin" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.functions.php">
@@ -567,7 +535,19 @@
       <option name="project" value="LOCAL" />
       <updated>1418616144659</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added number slider functionality to admin ratings">
+      <created>1418616955876</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1418616955876</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Removed ACF Number Slider plugin">
+      <created>1418679179981</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1418679179982</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -599,6 +579,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12543963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39921466" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.15123095" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -607,16 +588,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2125" sideWeight="0.84876907" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3985932" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12543963" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -650,7 +630,9 @@
     <MESSAGE value="Refactored overall rankings display to work across all post types" />
     <MESSAGE value="Moved all custom post types into a single plugin, moved all plugin functions into plugin, removed old plugins" />
     <MESSAGE value="Update presentation for all archive pages to utilize new plugin functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update presentation for all archive pages to utilize new plugin functions" />
+    <MESSAGE value="Added number slider functionality to admin ratings" />
+    <MESSAGE value="Removed ACF Number Slider plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed ACF Number Slider plugin" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -893,79 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="2070">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding>
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614187000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="2115">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding>
-            <element signature="e#6#140#0#PHP" expanded="false" />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614222000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="2130">
-          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding>
-            <element signature="e#6#137#0#PHP" expanded="false" />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1418614235000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Restaurants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8942307" vertical-offset="50" max-vertical-offset="1530">
-          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
-          <folding>
-            <element signature="e#6#143#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2474645" vertical-offset="0" max-vertical-offset="1470">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.541667" vertical-offset="155" max-vertical-offset="690">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="41" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.041666" vertical-offset="95" max-vertical-offset="660">
@@ -982,43 +891,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v5.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.25" vertical-offset="270" max-vertical-offset="8520">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/acf-number-slider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5355805" vertical-offset="429" max-vertical-offset="1230">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-shops.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="630">
+        <state vertical-scroll-proportion="0.65543073" vertical-offset="0" max-vertical-offset="801">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v3.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="5550">
-          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.21348314" vertical-offset="609" max-vertical-offset="1410">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <marker date="1418679319000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679319000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679319000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Restaurants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38202247" vertical-offset="639" max-vertical-offset="1440">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding>
+            <marker date="1418614203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418614203000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418614203000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76779026" vertical-offset="0" max-vertical-offset="1470">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/advanced-custom-fields-number-slider/number-slider-v4.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Shops.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6179775" vertical-offset="0" max-vertical-offset="4200">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.99250937" vertical-offset="0" max-vertical-offset="1425">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <marker date="1418679329000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679329000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679329000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/post-types/Experiences.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3445693" vertical-offset="669" max-vertical-offset="1470">
+          <caret line="63" column="1" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#101#0#PHP" expanded="true" />
+            <marker date="1418679293000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679293000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418679293000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/baskerville-child/display-restaurants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4494382" vertical-offset="0" max-vertical-offset="801">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-admin/includes/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34332085" vertical-offset="1870" max-vertical-offset="4845">
+          <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056179777" vertical-offset="0" max-vertical-offset="2940">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <marker date="1418745703000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418745703000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1418745703000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/admin/options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7116105" vertical-offset="0" max-vertical-offset="801">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

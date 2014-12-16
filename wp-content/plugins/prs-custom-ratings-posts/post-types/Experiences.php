@@ -56,46 +56,6 @@ function display_experience_table($posts, $username)
 }
 
 /**
- *  Display table of overall experience ratings
- */
-function display_experiences_overall()
-{
-    $posts = get_posts(array(
-        'numberposts' => -1,
-        'post_type' => 'experience'
-    ));
-
-    if ($posts) {
-        echo '<div class="rating-table overall-rating-table">
-        <table id="overallScores" class="tablesorter">
-            <thead>
-                <th>Restaurant</th>
-                <th class="center">Overall</th>
-                <th class="center">Venue</th>
-                <th class="center">Fun</th>
-                <th class="center">Intangibles</th>
-                <th class="center">Date</th>
-            </thead>
-            <tbody>';
-        foreach ($posts as $post) {
-            $scores = get_all_ratings_for_an_experience($post->ID);
-            $incomplete = '';
-            if ($scores['incomplete'] == true) {
-                $incomplete = '*';
-            }
-            echo '<tr ><td ><a href = "' . get_permalink($post->ID) . '" > ' . get_the_title($post->ID) . $incomplete . '</a ></td >';
-            echo '<td class="center">' . $scores['overallScore'] . '</td >';
-            echo '<td class="center">' . $scores['venueScore'] . '</td >';
-            echo '<td class="center">' . $scores['funScore'] . '</td >';
-            echo '<td class="center">' . $scores['intangiblesScore'] . '</td >';
-            echo '<td class="center">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
-        }
-
-        echo '</tbody></table><label>* - complete ratings to come</label></div>';
-    }
-}
-
-/**
  * Create array of all ratings for a single experience
  * @param $postId
  * @return array

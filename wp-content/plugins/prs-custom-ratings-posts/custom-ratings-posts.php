@@ -10,6 +10,8 @@
  * Time: 9:40 PM
  */
 
+require_once('admin/options.php');
+
 require_once('post-types/Experiences.php');
 require_once('post-types/Restaurants.php');
 require_once('post-types/Services.php');
@@ -126,7 +128,7 @@ function display_category_ratings_table($posttype, $category)
             echo '<td class="center collapsible">' . $scores[$ratings[0]] . '</td >';
             echo '<td class="center collapsible">' . $scores[$ratings[1]] . '</td >';
             echo '<td class="center collapsible">' . $scores[$ratings[2]] . '</td >';
-            echo '<td class="center collapsible">' . get_the_date('F d, Y', $post->ID) . '</td ></tr >';
+            echo '<td class="center collapsible">' . get_the_date('m/d/y', $post->ID) . '</td ></tr >';
         }
 
         echo '</tbody></table><label>* - complete ratings to come</label></div>';
