@@ -100,12 +100,14 @@ function display_category_ratings_table($posttype, $category)
         'category_name' => $category
     ));
 
+    $cleanCategory = str_replace(' ', '-', strtolower($category));
+
     $heading = get_table_headings($posttype);
     $ratings = get_posttype_rating_types($posttype);
 
     if ($posts) {
         echo '<div class="rating-table overall-rating-table">
-        <table id="overallScores-' . $category . '" class="tablesorter">
+        <table id="overallScores-' . $cleanCategory . '" class="tablesorter">
             <thead>
                 <th>' . $category . '</th>
                 <th class="center">Overall</th>

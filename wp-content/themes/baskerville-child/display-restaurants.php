@@ -21,7 +21,42 @@ Template Name: Restaurants (All)
             display_page_title();
             display_page_block_copy();
 
+            $catID = get_category_by_slug(get_the_title());
+
+            if ($catID->parent == 0) {
+
+                $args = array(
+                    'parent' => $catID->term_id,
+                    'taxonomy' => 'category'
+                );
+
+
+
+                $category = get_categories($args);
+
+            foreach ($category AS $item) {
+                display_category_ratings_table('restaurant', $item->cat_name);
+                ?>
+                <script>
+                    jQuery(document).ready(function () {
+                            jQuery("#overallScores-<?php echo str_replace(' ', '-', strtolower($item->cat_name)); ?>").tablesorter({sortList: [[1, 1]]});
+                        }
+                    );
+                </script>
+            <?php
+            }
+            } else {
             display_category_ratings_table('restaurant', get_the_title());
+            ?>
+                <script>
+                    jQuery(document).ready(function () {
+                            jQuery("#overallScores-<?php echo $catID->slug; ?>").tablesorter({sortList: [[1, 1]]});
+                        }
+                    );
+                </script>
+            <?php
+            }
+
             ?>
 
             <div class="cleardiv">&nbsp;</div>
@@ -29,10 +64,5 @@ Template Name: Restaurants (All)
         <!-- /content -->
 
     </div> <!-- /wrapper -->
-    <script>
-        jQuery(document).ready(function () {
-                jQuery("#overallScores-<? the_title();?>").tablesorter({sortList: [[1, 1]]});
-            }
-        );
-    </script>
+
 <?php get_footer(); ?>
