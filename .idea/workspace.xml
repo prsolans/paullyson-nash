@@ -272,7 +272,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/custom-header.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/inc/custom-header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/inc/custom-header.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentythirteen/inc/custom-header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/inc/custom-header.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwelve/inc/custom-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/prs-custom-ratings-posts/custom-ratings-posts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/customize-base.js" afterPath="$PROJECT_DIR$/wp-includes/js/customize-base.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/customize-base.min.js" afterPath="$PROJECT_DIR$/wp-includes/js/customize-base.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/css/customize-controls-rtl.css" afterPath="$PROJECT_DIR$/wp-admin/css/customize-controls-rtl.css" />
@@ -308,7 +307,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/css/deprecated-media.min.css" afterPath="$PROJECT_DIR$/wp-admin/css/deprecated-media.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/includes/deprecated.php" afterPath="$PROJECT_DIR$/wp-admin/includes/deprecated.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/deprecated.php" afterPath="$PROJECT_DIR$/wp-includes/deprecated.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/display-experiences.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/edit-comments.php" afterPath="$PROJECT_DIR$/wp-admin/edit-comments.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/edit-form-advanced.php" afterPath="$PROJECT_DIR$/wp-admin/edit-form-advanced.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/edit-form-comment.php" afterPath="$PROJECT_DIR$/wp-admin/edit-form-comment.php" />
@@ -339,7 +337,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/css/forms-rtl.css" afterPath="$PROJECT_DIR$/wp-admin/css/forms-rtl.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/css/forms.css" afterPath="$PROJECT_DIR$/wp-admin/css/forms.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/freedoms.php" afterPath="$PROJECT_DIR$/wp-admin/freedoms.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentythirteen/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwelve/functions.php" />
@@ -516,7 +513,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-admin/network/sites.php" afterPath="$PROJECT_DIR$/wp-admin/network/sites.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/js/tinymce/skins/lightgray/skin.min.css" afterPath="$PROJECT_DIR$/wp-includes/js/tinymce/skins/lightgray/skin.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-includes/pomo/streams.php" afterPath="$PROJECT_DIR$/wp-includes/pomo/streams.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/baskerville-child/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/twentyfourteen/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentythirteen/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/twentythirteen/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/twentytwelve/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/twentytwelve/style.css" />
@@ -645,9 +641,9 @@
             <state vertical-scroll-proportion="0.45692885" vertical-offset="2739" max-vertical-offset="5145">
               <caret line="216" column="5" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
               <folding>
-                <marker date="1418938637000" expanded="true" signature="4937:5440" placeholder="..." />
-                <marker date="1418938637000" expanded="true" signature="5015:5440" placeholder="..." />
-                <marker date="1418938637000" expanded="true" signature="5035:5420" placeholder="..." />
+                <marker date="1418939346000" expanded="true" signature="4938:5441" placeholder="..." />
+                <marker date="1418939346000" expanded="true" signature="5016:5441" placeholder="..." />
+                <marker date="1418939346000" expanded="true" signature="5036:5421" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1194,7 +1190,13 @@
       <option name="project" value="LOCAL" />
       <updated>1418935776787</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Experience updates for custom post plugin">
+      <created>1418939355078</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1418939355078</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1284,7 +1286,8 @@
     <MESSAGE value="Added Upcoming/Radar lists for restaurants (display and functions), header background color change," />
     <MESSAGE value="Updated restaurants and services overall displays and the corresponding functions." />
     <MESSAGE value="Renamed CSS styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed CSS styles" />
+    <MESSAGE value="Experience updates for custom post plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Experience updates for custom post plugin" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -1644,9 +1647,9 @@
         <state vertical-scroll-proportion="0.45692885" vertical-offset="2739" max-vertical-offset="5145">
           <caret line="216" column="5" selection-start-line="216" selection-start-column="5" selection-end-line="216" selection-end-column="5" />
           <folding>
-            <marker date="1418938637000" expanded="true" signature="4937:5440" placeholder="..." />
-            <marker date="1418938637000" expanded="true" signature="5015:5440" placeholder="..." />
-            <marker date="1418938637000" expanded="true" signature="5035:5420" placeholder="..." />
+            <marker date="1418939346000" expanded="true" signature="4938:5441" placeholder="..." />
+            <marker date="1418939346000" expanded="true" signature="5016:5441" placeholder="..." />
+            <marker date="1418939346000" expanded="true" signature="5036:5421" placeholder="..." />
           </folding>
         </state>
       </provider>

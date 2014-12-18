@@ -209,7 +209,7 @@ switch($step) {
 		$install .= '?language=en_US';
 	}
 
-	$tryagain_link = '</p><p class="step"><a href="' . $step_1 . '" onclick="javascript:history.go(-1);return false;" class="button button-large">' . __( 'Try again' ) . '</a>';
+		$tryagain_link = '</p><p class="step"><a href="' . $step_1 . '" onclick="history.go(-1);return false;" class="button button-large">' . __('Try again') . '</a>';
 
 	if ( empty( $prefix ) )
 		wp_die( __( '<strong>ERROR</strong>: "Table Prefix" must not be empty.' . $tryagain_link ) );
@@ -308,9 +308,11 @@ switch($step) {
 <p class="step"><a href="<?php echo $install; ?>" class="button button-large"><?php _e( 'Run the install' ); ?></a></p>
 <script>
 (function(){
-var el=document.getElementById('wp-config');
-el.focus();
-el.select();
+	if (!/iPad|iPod|iPhone/.test(navigator.userAgent)) {
+		var el = document.getElementById('wp-config');
+		el.focus();
+		el.select();
+	}
 })();
 </script>
 <?php

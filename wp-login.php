@@ -25,7 +25,8 @@ if ( force_ssl_admin() && ! is_ssl() ) {
 /**
  * Output the login page header.
  *
- * @param string   $title    Optional. WordPress Log In Page title to display in <title> element. Default 'Log In'.
+ * @param string $title Optional. WordPress login Page title to display in the `<title>` element.
+ *                           Default 'Log In'.
  * @param string   $message  Optional. Message to display in header. Default empty.
  * @param WP_Error $wp_error Optional. The error to pass. Default empty.
  */
@@ -76,8 +77,17 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	 */
 	if ( 'loggedout' == $wp_error->get_error_code() ) {
 		?>
-		<script>if("sessionStorage" in window){try{for(var key in sessionStorage){if(key.indexOf("wp-autosave-")!=-1){sessionStorage.removeItem(key)}}}catch(e){}};</script>
-		<?php
+		<script>if ("sessionStorage" in window) {
+				try {
+					for (var key in sessionStorage) {
+						if (key.indexOf("wp-autosave-") != -1) {
+							sessionStorage.removeItem(key)
+						}
+					}
+				} catch (e) {
+				}
+			}</script>
+	<?php
 	}
 
 	/**
@@ -249,7 +259,13 @@ addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).rea
 function s(id,pos){g(id).left=pos+'px';}
 function g(id){return document.getElementById(id).style;}
 function shake(id,a,d){c=a.shift();s(id,c);if(a.length>0){setTimeout(function(){shake(id,a,d);},d);}else{try{g(id).position='static';wp_attempt_focus();}catch(e){}}}
-addLoadEvent(function(){ var p=new Array(15,30,15,0,-15,-30,-15,0);p=p.concat(p.concat(p));var i=document.forms[0].id;g(i).position='relative';shake(i,p,20);});
+addLoadEvent(function () {
+	var p = [15, 30, 15, 0, -15, -30, -15, 0];
+	p = p.concat(p.concat(p));
+	var i = document.forms[0].id;
+	g(i).position = 'relative';
+	shake(i, p, 20);
+});
 </script>
 <?php
 }
@@ -263,7 +279,8 @@ function wp_login_viewport_meta() {
 /**
  * Handles sending password retrieval email to user.
  *
- * @uses $wpdb WordPress Database object
+ * @global wpdb $wpdb WordPress database abstraction object.
+ * @global PasswordHash $wp_hasher Portable PHP password hashing framework.
  *
  * @return bool|WP_Error True: when finish. WP_Error on error
  */
@@ -383,15 +400,19 @@ function retrieve_password() {
 	 * @param string $title Default email title.
 	 */
 	$title = apply_filters( 'retrieve_password_title', $title );
+
 	/**
 	 * Filter the message body of the password reset mail.
 	 *
 	 * @since 2.8.0
+	 * @since 4.1.0 Added `$user_login` and `$user_data` parameters.
 	 *
 	 * @param string $message Default mail message.
-	 * @param string $key     The activation key.
+	 * @param string $key The activation key.
+	 * @param string $user_login The username for the user.
+	 * @param WP_User $user_data WP_User object.
 	 */
-	$message = apply_filters( 'retrieve_password_message', $message, $key );
+	$message = apply_filters('retrieve_password_message', $message, $key, $user_login, $user_data);
 
 	if ( $message && !wp_mail( $user_email, wp_specialchars_decode( $title ), $message ) )
 		wp_die( __('The e-mail could not be sent.') . "<br />\n" . __('Possible reason: your host may have disabled the mail() function.') );
@@ -441,7 +462,7 @@ do_action( 'login_init' );
 /**
  * Fires before a specified login form action.
  *
- * The dynamic portion of the hook name, $action, refers to the action
+ * The dynamic portion of the hook name, `$action`, refers to the action
  * that brought the visitor to the login form. Actions include 'postpass',
  * 'logout', 'lostpassword', etc.
  *
@@ -532,7 +553,7 @@ case 'retrievepassword' :
 	</p>
 	<?php
 	/**
-	 * Fires inside the lostpassword <form> tags, before the hidden fields.
+	 * Fires inside the lostpassword form tags, before the hidden fields.
 	 *
 	 * @since 2.1.0
 	 */
@@ -629,8 +650,7 @@ case 'rp' :
 	</p>
 
 	<div id="pass-strength-result" class="hide-if-no-js"><?php _e('Strength indicator'); ?></div>
-	<p class="description indicator-hint"><?php _e('Hint: The password should be at least seven characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ &amp; ).'); ?></p>
-
+	<p class="description indicator-hint"><?php echo wp_get_password_hint(); ?></p>
 	<br class="clear" />
 
 	<?php
