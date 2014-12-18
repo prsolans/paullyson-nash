@@ -42,6 +42,73 @@ function display_user_ratings_table($posttype, $username)
 
 }
 
+function display_category_to_do_list($posttype, $category)
+{
+    $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => $posttype,
+        'category_name' => $category,
+        'meta_query' => array(
+            array(
+                'key' => 'to_do',
+                'value' => 'Upcoming'
+            )
+        )
+    ));
+
+    echo "<div class='to-do-list-block shadow-box-border'><h2>Upcoming</h2>";
+
+    if ($posts) {
+
+        echo "<ul>";
+        foreach ($posts AS $item) {
+            $upcomingDate = get_upcoming_post_date($item->ID);
+            echo "<li>" . $upcomingDate . " - <a href='" . get_permalink($item->ID) . "'>" . get_the_title($item->ID) . "</a></li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "No " . $category . " Upcoming";
+    }
+    echo "</div>";
+
+    $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => $posttype,
+        'category_name' => $category,
+        'meta_query' => array(
+            array(
+                'key' => 'to_do',
+                'value' => 'On the Radar'
+            )
+        )
+    ));
+
+    echo "<div class='to-do-list-block shadow-box-border'><h2>On the Radar</h2>";
+
+
+    if ($posts) {
+        echo "<ul>";
+        foreach ($posts AS $item) {
+            echo "<li><a href='" . get_permalink($item->ID) . "'>" . get_the_title($item->ID) . "</a></li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "No " . $category . " On the Radar";
+    }
+
+    echo "</div>";
+
+}
+
+function get_upcoming_post_date($postID)
+{
+
+    $post = get_post_meta($postID);
+
+    $upcomingDate = new DateTime($post['date'][0]);
+
+    return $upcomingDate->format('m/d');
+}
 /**
  * Get headings for table presentation of posttype ratings
  * @param $posttype
@@ -97,7 +164,13 @@ function display_category_ratings_table($posttype, $category)
     $posts = get_posts(array(
         'numberposts' => -1,
         'post_type' => $posttype,
-        'category_name' => $category
+        'category_name' => $category,
+        'meta_query' => array(
+            array(
+                'key' => 'to_do',
+                'value' => 'Been There, Done That',
+            )
+        )
     ));
 
     $cleanCategory = str_replace(' ', '-', strtolower($category));

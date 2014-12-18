@@ -13,6 +13,11 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+h2 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
 .blog-title, .post-header .post-title {font-family: 'Fira Sans', sans-serif; font-weight: 700;}
 
 .nocomments {display: none;}
@@ -25,8 +30,36 @@
     width: 100% !important;
 }
 
+.widget-content ul li:before {
+    content: ' '
+}
+
+/* =Header display starts here
+-------------------------------------------------------------- */
+.header-bg-yellow {
+    background: yellow;
+}
+
+.header-bg-green {
+    background: green;
+}
+
+.header-bg-blue {
+    background: blue;
+}
+
 /* =Ratings display starts here
 -------------------------------------------------------------- */
+
+.shadow-box-border {
+    box-shadow: 0 3px 8px rgba(71, 71, 71, 0.91);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.to-do-list-block {
+    margin: 10px 0 !important;
+}
 
 .rating-block, .rating-table {
     width: 50%;
@@ -110,8 +143,19 @@
     float: left;
 }
 
+.one-third-right {
+    width: 32%;
+    margin-left: 1%;
+    float: left;
+}
+
+.two-thirds-left {
+    width: 66%;
+    margin-right: 1%;
+    float: left;
+}
 @media (max-width: 768px) {
-    .one-half {
+    .one-half, .one-third-right, .two-thirds-left {
         width: 100%;
         margin: 10px 0;
         clear: both;

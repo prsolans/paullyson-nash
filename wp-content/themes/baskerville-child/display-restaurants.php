@@ -21,6 +21,13 @@ Template Name: Restaurants (All)
             display_page_title();
             display_page_block_copy();
 
+            ?>
+
+
+            <div class="two-thirds-left">
+                <h2>Ratings</h2>
+                <?php
+
             $catID = get_category_by_slug(get_the_title());
 
             if ($catID->parent == 0) {
@@ -29,8 +36,6 @@ Template Name: Restaurants (All)
                     'parent' => $catID->term_id,
                     'taxonomy' => 'category'
                 );
-
-
 
                 $category = get_categories($args);
 
@@ -58,6 +63,13 @@ Template Name: Restaurants (All)
             }
 
             ?>
+            </div>
+
+            <div class="one-third-right">
+                <?php
+                display_category_to_do_list('restaurant', get_the_title());
+                ?>
+            </div>
 
             <div class="cleardiv">&nbsp;</div>
         </div>

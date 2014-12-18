@@ -25,8 +25,7 @@ function add_custom_theme_assets()
  */
 function display_page_title()
 {
-    echo '<h2 class="post-title"><a href="' . get_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a>';
-    echo '</h2>';
+    echo '<h2 class="post-title">' . get_the_title() . '</h2>';
 }
 
 /**
@@ -38,6 +37,22 @@ function display_page_block_copy()
     if (have_posts()) : while (have_posts()) : the_post();
         the_content();
     endwhile; endif;
+}
+
+/**
+ *  Add class name to header div based upon page category
+ */
+function get_theme_header_bg_class()
+{
+
+    $category = get_category_by_slug(get_the_title());
+    if ($category->name == "Food" || $category->parent == "4") {
+        echo "header-bg-yellow";
+    } elseif ($category->name == "Experiences") {
+        echo "header-bg-blue";
+    } elseif ($category->name == "Services") {
+        echo "header-bg-green";
+    }
 }
 
 add_filter('pre_get_posts', 'query_post_type');
