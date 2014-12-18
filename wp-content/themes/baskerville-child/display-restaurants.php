@@ -24,11 +24,6 @@ Template Name: Restaurants (All)
             display_rating_sidebar('restaurant');
             ?>
 
-
-
-
-
-
             <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->

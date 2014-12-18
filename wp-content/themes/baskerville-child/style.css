@@ -52,13 +52,13 @@ h2 {
 -------------------------------------------------------------- */
 
 .shadow-box-border {
-    box-shadow: 0 3px 8px rgba(71, 71, 71, 0.91);
+    box-shadow: 0 3px 8px rgba(71, 71, 71, 0.61);
     border-radius: 4px;
     padding: 10px;
 }
 
-.to-do-list-block {
-    margin: 10px 0 !important;
+.rating-sidebar-block {
+    margin: 62px 0 10px !important;
 }
 
 .rating-block, .rating-table {

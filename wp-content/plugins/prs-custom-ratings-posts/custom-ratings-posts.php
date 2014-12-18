@@ -56,7 +56,7 @@ function display_category_to_do_list($posttype, $category)
         )
     ));
 
-    echo "<div class='to-do-list-block shadow-box-border'><h2>Upcoming</h2>";
+    echo "<div class='rating-sidebar-block shadow-box-border'><h2>Upcoming</h2>";
 
     if ($posts) {
 
@@ -83,7 +83,7 @@ function display_category_to_do_list($posttype, $category)
         )
     ));
 
-    echo "<div class='to-do-list-block shadow-box-border'><h2>On the Radar</h2>";
+    echo "<div class='rating-sidebar-block shadow-box-border'><h2>On the Radar</h2>";
 
 
     if ($posts) {
@@ -291,8 +291,6 @@ function display_ratings_listings($posttype)
         $category = get_categories($args);
 
         if ($category) {
-
-            echo "!!!";
 
             foreach ($category AS $item) {
                 display_category_ratings_table($posttype, $item->cat_name);
