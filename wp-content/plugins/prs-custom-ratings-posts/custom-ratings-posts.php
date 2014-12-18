@@ -13,6 +13,7 @@
 require_once('admin/options.php');
 
 require_once('post-types/Experiences.php');
+require_once('post-types/Music.php');
 require_once('post-types/Restaurants.php');
 require_once('post-types/Services.php');
 require_once('post-types/Shops.php');
@@ -105,9 +106,12 @@ function get_upcoming_post_date($postID)
 
     $post = get_post_meta($postID);
 
-    $upcomingDate = new DateTime($post['upcoming_restaurant_date'][0]);
+    if ($post) {
 
-    return $upcomingDate->format('m/d');
+        $upcomingDate = new DateTime($post['upcoming_date'][0]);
+
+        return $upcomingDate->format('m/d');
+    }
 }
 
 /**
@@ -209,7 +213,7 @@ function display_category_ratings_table($posttype, $category)
 
         echo '</tbody></table><label>* - complete ratings to come</label></div>';
     } else {
-        echo $posttype;
+//        echo $posttype;
     }
 }
 

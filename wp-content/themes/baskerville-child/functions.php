@@ -46,12 +46,15 @@ function get_theme_header_bg_class()
 {
 
     $category = get_category_by_slug(get_the_title());
-    if ($category->name == "Food" || $category->parent == "4") {
-        echo "header-bg-yellow";
-    } elseif ($category->name == "Experiences") {
-        echo "header-bg-blue";
-    } elseif ($category->name == "Services") {
-        echo "header-bg-green";
+
+    if ($category) {
+        if ($category->name == "Food" || $category->parent == "4") {
+            echo "header-bg-yellow";
+        } elseif ($category->name == "Experiences") {
+            echo "header-bg-blue";
+        } elseif ($category->name == "Services") {
+            echo "header-bg-green";
+        }
     }
 }
 
