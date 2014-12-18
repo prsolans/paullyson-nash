@@ -50,7 +50,7 @@ function display_category_to_do_list($posttype, $category)
         'category_name' => $category,
         'meta_query' => array(
             array(
-                'key' => 'to_do',
+                'key' => 'status',
                 'value' => 'Upcoming'
             )
         )
@@ -77,7 +77,7 @@ function display_category_to_do_list($posttype, $category)
         'category_name' => $category,
         'meta_query' => array(
             array(
-                'key' => 'to_do',
+                'key' => 'status',
                 'value' => 'On the Radar'
             )
         )
@@ -105,10 +105,11 @@ function get_upcoming_post_date($postID)
 
     $post = get_post_meta($postID);
 
-    $upcomingDate = new DateTime($post['date'][0]);
+    $upcomingDate = new DateTime($post['upcoming_restaurant_date'][0]);
 
     return $upcomingDate->format('m/d');
 }
+
 /**
  * Get headings for table presentation of posttype ratings
  * @param $posttype
@@ -167,7 +168,7 @@ function display_category_ratings_table($posttype, $category)
         'category_name' => $category,
         'meta_query' => array(
             array(
-                'key' => 'to_do',
+                'key' => 'status',
                 'value' => 'Been There, Done That',
             )
         )
@@ -271,4 +272,74 @@ function get_all_ratings($heading, $ratings, $posttype, $postId)
         $calculatedScores['incomplete'] = true;
     }
     return $calculatedScores;
+}
+
+function display_ratings_listings($posttype)
+{
+
+    echo "<div class='two-thirds-left'><h2>Ratings</h2>";
+
+    $catID = get_category_by_slug(get_the_title());
+
+    if ($catID->parent == 0) {
+
+        $args = array(
+            'parent' => $catID->term_id,
+            'taxonomy' => 'category'
+        );
+
+        $category = get_categories($args);
+
+        if ($category) {
+
+            echo "!!!";
+
+            foreach ($category AS $item) {
+                display_category_ratings_table($posttype, $item->cat_name);
+                ?>
+                <script>
+                    jQuery(document).ready(function () {
+                            jQuery("#overallScores-<?php echo str_replace(' ', '-', strtolower($item->cat_name)); ?>").tablesorter({sortList: [[1, 1]]});
+                        }
+                    );
+                </script>
+            <?php
+            }
+        } else {
+            display_category_ratings_table($posttype, get_the_title());
+            ?>
+            <script>
+                jQuery(document).ready(function () {
+                        jQuery("#overallScores-<?php echo $catID->slug; ?>").tablesorter({sortList: [[1, 1]]});
+                    }
+                );
+            </script>
+        <?php
+        }
+    } else {
+
+        display_category_ratings_table($posttype, get_the_title());
+        ?>
+        <script>
+            jQuery(document).ready(function () {
+                    jQuery("#overallScores-<?php echo $catID->slug; ?>").tablesorter({sortList: [[1, 1]]});
+                }
+            );
+        </script>
+    <?php
+    }
+
+    ?>
+</div>
+<?php
+}
+
+function display_rating_sidebar($posttype)
+{
+
+    echo '<div class="one-third-right">';
+
+    display_category_to_do_list($posttype, get_the_title());
+
+    echo '</div>';
 }

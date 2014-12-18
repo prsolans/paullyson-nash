@@ -20,11 +20,11 @@ Template Name: Services (All)
             <?php
             display_page_title();
             display_page_block_copy();
+            display_ratings_listings('service');
+            display_rating_sidebar('service');
+
             ?>
 
-            <?php
-            display_category_ratings_table('service', '');
-            ?>
             <div class="cleardiv">&nbsp;</div>
         </div>
         <!-- /content -->
@@ -32,7 +32,7 @@ Template Name: Services (All)
     </div> <!-- /wrapper -->
     <script>
         jQuery(document).ready(function () {
-                jQuery("#overallScores-").tablesorter({sortList: [[1, 1]]});
+                jQuery("#overallScores-<?php echo strtolower(get_the_title()); ?>").tablesorter({sortList: [[1, 1]]});
             }
         );
     </script>
