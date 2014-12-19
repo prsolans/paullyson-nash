@@ -13,7 +13,6 @@
 require_once('admin/options.php');
 
 require_once('post-types/Experiences.php');
-require_once('post-types/Music.php');
 require_once('post-types/Restaurants.php');
 require_once('post-types/Services.php');
 require_once('post-types/Shops.php');
@@ -344,4 +343,68 @@ function display_rating_sidebar($posttype)
     display_category_to_do_list($posttype, get_the_title());
 
     echo '</div>';
+}
+
+function display_recent_ratings($lastMonth = false)
+{
+    $monthToDisplay = date('F');
+    $offset = 0;
+    if($lastMonth == true){ $offset = 1; $monthToDisplay = date('F', strtotime('-1 months')); }
+
+    echo "<h2>Best of " . $monthToDisplay . "</h2>";
+
+    $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => array('restaurant', 'experience', 'service', 'shop'),
+        'meta_query' => array(
+            array(
+                'key' => 'status',
+                'value' => 'Been There, Done That',
+            )
+        ),
+        'orderby' => 'post_date',
+        'order' => 'ASC',
+        'date_query' => array(
+            array(
+                'year' => date('Y'),
+                'month' => date('m') - $offset,
+            ),
+        ),
+
+    ));
+    echo "<ul>";
+    if ($posts) {
+        foreach ($posts AS $item) {
+            echo "<li><a href='".get_permalink($item->ID)."'> " . $item->post_title . "</a></li>";
+        }
+    }
+    echo "</ul>";
+}
+
+function display_upcoming_events()
+{
+
+    echo "<h2>Upcoming Fun Stuff</h2>";
+
+    $posts = get_posts(array(
+        'numberposts' => -1,
+        'post_type' => array('restaurant', 'experience', 'service', 'shop'),
+//        'category_name' => $category,
+        'meta_query' => array(
+            array(
+                'key' => 'status',
+                'value' => 'Upcoming',
+            )
+        ),
+        'orderby' => 'post_date',
+        'order' => 'ASC'
+    ));
+
+    echo "<ul>";
+    if ($posts) {
+        foreach ($posts AS $item) {
+            echo "<li><a href='".get_permalink($item->ID)."'> " . $item->post_title . "</a></li>";
+        }
+    }
+    echo "</ul>";
 }

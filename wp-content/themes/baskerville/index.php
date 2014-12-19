@@ -25,7 +25,7 @@
 		<?php if (have_posts()) : ?>
 		
 			<div class="posts">
-					
+
 		    	<?php while (have_posts()) : the_post(); ?>
 		    	
 		    		<div class="post-container">
