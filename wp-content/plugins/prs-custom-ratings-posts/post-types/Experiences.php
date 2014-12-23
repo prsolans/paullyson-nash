@@ -21,11 +21,39 @@ function create_experience_post_type()
             'has_archive' => true,
             'menu_position' => 4,
             'menu_icon' => 'dashicons-smiley',
-            'taxonomies' => array('category', 'post_tag'),
-            'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
+            'hierarchical' => true,
+            'taxonomies' => array('category', 'post_tag', 'venue'),
+            'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'page-attributes')
         )
     );
+
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name' => _x('Venues', 'taxonomy general name'),
+        'singular_name' => _x('Venue', 'taxonomy singular name'),
+        'search_items' => __('Search Venues'),
+        'all_items' => __('All Venues'),
+        'parent_item' => __('Parent Venue'),
+        'parent_item_colon' => __('Parent Venue:'),
+        'edit_item' => __('Edit Venue'),
+        'update_item' => __('Update Venue'),
+        'add_new_item' => __('Add New Venue'),
+        'new_item_name' => __('New Venue Name'),
+        'menu_name' => __('Venues'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'venue'),
+    );
+
+    register_taxonomy('venue', 'experience', $args);
 }
+
 
 /**
  * Display table of experience ratings for a specific author

@@ -95,6 +95,7 @@ h2 {
 }
 
 .rating-table table td.center, .rating-table table th.center {
+    min-width: 40px;
     text-align: center;
 }
 
@@ -139,7 +140,8 @@ h2 {
 .cleardiv {clear: both; height: 20px}
 
 .one-half {
-    width: 50%;
+    width: 48%;
+    margin: 0 1%;
     float: left;
 }
 

@@ -17,6 +17,40 @@ require_once('post-types/Restaurants.php');
 require_once('post-types/Services.php');
 require_once('post-types/Shops.php');
 
+
+add_action('init', 'register_location_taxonomy');
+
+/**
+ * Register Location taxonomy for all relevant custom post types
+ */
+function register_location_taxonomy(){
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name' => _x('Locations', 'taxonomy general name'),
+        'singular_name' => _x('Location', 'taxonomy singular name'),
+        'search_items' => __('Search Locations'),
+        'all_items' => __('All Locations'),
+        'parent_item' => __('Parent Location'),
+        'parent_item_colon' => __('Parent Location:'),
+        'edit_item' => __('Edit Location'),
+        'update_item' => __('Update Location'),
+        'add_new_item' => __('Add New Location'),
+        'new_item_name' => __('New Location Name'),
+        'menu_name' => __('Locations'),
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'location'),
+    );
+
+    register_taxonomy('location', array('experience', 'restaurant', 'service', 'shop'), $args);
+}
+
 /**
  * Collect posts and send to appropriate display function
  *
@@ -39,7 +73,6 @@ function display_user_ratings_table($posttype, $username)
     } elseif ($posttype == 'service') {
         display_service_table($posts, $username);
     }
-
 }
 
 function display_category_to_do_list($posttype, $category)
@@ -56,9 +89,9 @@ function display_category_to_do_list($posttype, $category)
         )
     ));
 
-    echo "<div class='rating-sidebar-block shadow-box-border'><h2>Upcoming</h2>";
 
     if ($posts) {
+        echo "<div class='rating-sidebar-block shadow-box-border'><h2>Upcoming</h2>";
 
         echo "<ul>";
         foreach ($posts AS $item) {
@@ -66,10 +99,12 @@ function display_category_to_do_list($posttype, $category)
             echo "<li>" . $upcomingDate . " - <a href='" . get_permalink($item->ID) . "'>" . get_the_title($item->ID) . "</a></li>";
         }
         echo "</ul>";
+
+        echo "</div>";
+
     } else {
-        echo "No " . $category . " Upcoming";
+        return false;
     }
-    echo "</div>";
 
     $posts = get_posts(array(
         'numberposts' => -1,
@@ -83,21 +118,19 @@ function display_category_to_do_list($posttype, $category)
         )
     ));
 
-    echo "<div class='rating-sidebar-block shadow-box-border'><h2>On the Radar</h2>";
-
-
     if ($posts) {
+        echo "<div class='rating-sidebar-block shadow-box-border'><h2>On the Radar</h2>";
+
         echo "<ul>";
         foreach ($posts AS $item) {
             echo "<li><a href='" . get_permalink($item->ID) . "'>" . get_the_title($item->ID) . "</a></li>";
         }
         echo "</ul>";
+
+        echo "</div>";
     } else {
-        echo "No " . $category . " On the Radar";
+        return false;
     }
-
-    echo "</div>";
-
 }
 
 function get_upcoming_post_date($postID)
@@ -212,7 +245,7 @@ function display_category_ratings_table($posttype, $category)
 
         echo '</tbody></table><label>* - complete ratings to come</label></div>';
     } else {
-//        echo $posttype;
+        return false;
     }
 }
 
@@ -349,7 +382,10 @@ function display_recent_ratings($lastMonth = false)
 {
     $monthToDisplay = date('F');
     $offset = 0;
-    if($lastMonth == true){ $offset = 1; $monthToDisplay = date('F', strtotime('-1 months')); }
+    if ($lastMonth == true) {
+        $offset = 1;
+        $monthToDisplay = date('F', strtotime('-1 months'));
+    }
 
     echo "<h2>Best of " . $monthToDisplay . "</h2>";
 
@@ -375,7 +411,7 @@ function display_recent_ratings($lastMonth = false)
     echo "<ul>";
     if ($posts) {
         foreach ($posts AS $item) {
-            echo "<li><a href='".get_permalink($item->ID)."'> " . $item->post_title . "</a></li>";
+            echo "<li><a href='" . get_permalink($item->ID) . "'> " . $item->post_title . "</a></li>";
         }
     }
     echo "</ul>";
@@ -389,7 +425,6 @@ function display_upcoming_events()
     $posts = get_posts(array(
         'numberposts' => -1,
         'post_type' => array('restaurant', 'experience', 'service', 'shop'),
-//        'category_name' => $category,
         'meta_query' => array(
             array(
                 'key' => 'status',
@@ -403,7 +438,7 @@ function display_upcoming_events()
     echo "<ul>";
     if ($posts) {
         foreach ($posts AS $item) {
-            echo "<li><a href='".get_permalink($item->ID)."'> " . $item->post_title . "</a></li>";
+            echo "<li><a href='" . get_permalink($item->ID) . "'> " . $item->post_title . "</a></li>";
         }
     }
     echo "</ul>";
