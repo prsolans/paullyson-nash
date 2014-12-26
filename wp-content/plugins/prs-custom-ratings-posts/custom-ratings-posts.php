@@ -443,3 +443,25 @@ function display_upcoming_events()
     }
     echo "</ul>";
 }
+
+function get_location_address($location){
+    $address = $location['address'];
+    $lines = explode(',', $address);
+
+    if($lines){
+        $htmlAddress = '';
+        $count = count($lines);
+
+        for($i=0; $i<($count-3); $i++) {
+                $htmlAddress .= $lines[$i] . '<br/>';
+
+        }
+
+        for($i; $i<($count-2); $i++){
+        $htmlAddress .= $lines[$i] . ', ';
+        }
+
+        $htmlAddress .= $lines[$i];
+    }
+    return $htmlAddress;
+}

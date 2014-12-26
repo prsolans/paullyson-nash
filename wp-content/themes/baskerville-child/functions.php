@@ -15,7 +15,25 @@ function add_custom_theme_assets()
         true
     );
 
+    wp_register_script(
+        'acf-google-maps',
+        get_template_directory_uri() . '-child/js/google-maps.js',
+        array('jquery'),
+        '1.0',
+        true
+    );
+
+    wp_register_script(
+        'google-maps-api',
+        'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false',
+        array('jquery'),
+        '1.0',
+        true
+    );
+
     wp_enqueue_script('tablesorter');
+    wp_enqueue_script('google-maps-api');
+    wp_enqueue_script('acf-google-maps');
     wp_enqueue_style('tablesorter', get_template_directory_uri() . '-child/styles/tablesorter/tablesorter.css');
 }
 

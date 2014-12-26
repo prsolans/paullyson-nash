@@ -165,3 +165,23 @@ h2 {
 }
 
 
+/* =ACF Google map classes
+-------------------------------------------------------------- */
+
+.acf-map {
+    width: 100%;
+    height: 400px;
+    border: #ccc solid 1px;
+    margin: 20px 0;
+}
+
+.acf-map img {
+    max-width: none !important;
+    height: auto !important;
+    background: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
