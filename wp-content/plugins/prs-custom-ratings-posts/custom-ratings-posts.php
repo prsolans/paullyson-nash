@@ -23,7 +23,8 @@ add_action('init', 'register_location_taxonomy');
 /**
  * Register Location taxonomy for all relevant custom post types
  */
-function register_location_taxonomy(){
+function register_location_taxonomy()
+{
     // Add new taxonomy, make it hierarchical (like categories)
     $labels = array(
         'name' => _x('Locations', 'taxonomy general name'),
@@ -75,6 +76,11 @@ function display_user_ratings_table($posttype, $username)
     }
 }
 
+/**
+ * @param $posttype
+ * @param $category
+ * @return bool|null
+ */
 function display_category_to_do_list($posttype, $category)
 {
     $posts = get_posts(array(
@@ -131,8 +137,14 @@ function display_category_to_do_list($posttype, $category)
     } else {
         return false;
     }
+
+    return null;
 }
 
+/**
+ * @param $postID
+ * @return null|string
+ */
 function get_upcoming_post_date($postID)
 {
 
@@ -144,6 +156,8 @@ function get_upcoming_post_date($postID)
 
         return $upcomingDate->format('m/d');
     }
+
+    return null;
 }
 
 /**
@@ -247,6 +261,8 @@ function display_category_ratings_table($posttype, $category)
     } else {
         return false;
     }
+
+    return null;
 }
 
 /**
@@ -310,6 +326,9 @@ function get_all_ratings($heading, $ratings, $posttype, $postId)
     return $calculatedScores;
 }
 
+/**
+ * @param $posttype
+ */
 function display_ratings_listings($posttype)
 {
 
@@ -368,6 +387,10 @@ function display_ratings_listings($posttype)
 <?php
 }
 
+/**
+ * Display Upcoming and Radar lists on right sidebar of "display" category pages
+ * @param $posttype
+ */
 function display_rating_sidebar($posttype)
 {
 
@@ -378,6 +401,9 @@ function display_rating_sidebar($posttype)
     echo '</div>';
 }
 
+/**
+ * @param bool $lastMonth
+ */
 function display_recent_ratings($lastMonth = false)
 {
     $monthToDisplay = date('F');
@@ -390,7 +416,7 @@ function display_recent_ratings($lastMonth = false)
     echo "<h2>Best of " . $monthToDisplay . "</h2>";
 
     $posts = get_posts(array(
-        'numberposts' => -1,
+        'numberposts' => 5,
         'post_type' => array('restaurant', 'experience', 'service', 'shop'),
         'meta_query' => array(
             array(
@@ -405,25 +431,46 @@ function display_recent_ratings($lastMonth = false)
                 'year' => date('Y'),
                 'month' => date('m') - $offset,
             ),
-        ),
-
+        )
     ));
     echo "<ul>";
     if ($posts) {
+
+        $i = 0;
+
+        // CREATE ARRAY of recent ratings posts and details
         foreach ($posts AS $item) {
-            echo "<li><a href='" . get_permalink($item->ID) . "'> " . $item->post_title . "</a></li>";
+            $scores = get_all_ratings_for_a_restaurant($item->ID);
+
+            $list[$i]['link'] = get_permalink($item->ID);
+            $list[$i]['title'] = $item->post_title;
+            $list[$i]['overallScore'] = $scores['overallScore'];
+            $i++;
+        }
+
+        // SORT list items by overallScore
+        usort($list, function ($a, $b) {
+            return $b['overallScore'] - $a['overallScore'];
+        });
+
+        foreach ($list AS $item) {
+            echo "<li><a href='" . $item['link'] . "'> " . $item['title'] . "</a> - " . $item['overallScore'] . "</li>";
         }
     }
+
     echo "</ul>";
 }
 
+/**
+ *
+ */
 function display_upcoming_events()
 {
 
     echo "<h2>Upcoming Fun Stuff</h2>";
 
     $posts = get_posts(array(
-        'numberposts' => -1,
+        'numberposts' => 5,
         'post_type' => array('restaurant', 'experience', 'service', 'shop'),
         'meta_query' => array(
             array(
@@ -444,21 +491,27 @@ function display_upcoming_events()
     echo "</ul>";
 }
 
-function get_location_address($location){
+/**
+ * @param $location
+ * @return string
+ */
+function get_location_address($location)
+{
     $address = $location['address'];
     $lines = explode(',', $address);
 
-    if($lines){
-        $htmlAddress = '';
+    $htmlAddress = '';
+
+    if ($lines) {
         $count = count($lines);
 
-        for($i=0; $i<($count-3); $i++) {
-                $htmlAddress .= $lines[$i] . '<br/>';
+        for ($i = 0; $i < ($count - 3); $i++) {
+            $htmlAddress .= $lines[$i] . '<br/>';
 
         }
 
-        for($i; $i<($count-2); $i++){
-        $htmlAddress .= $lines[$i] . ', ';
+        for ($i; $i < ($count - 2); $i++) {
+            $htmlAddress .= $lines[$i] . ', ';
         }
 
         $htmlAddress .= $lines[$i];
